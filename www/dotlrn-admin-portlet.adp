@@ -22,6 +22,7 @@
 
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
+  <li><a href="dotlrn-group-admin-faq">Administrator FAQ</a></li>
   <li><a href="clone">#dotlrn-portlet.Copy_this_group#</a></li>
   <if @archived_p@ eq t>
   <li><a href="@dotlrn_admin_url@/archived-communities"><font color=red>#dotlrn-portlet.lt_This_group_is_archive#</font></a>
