@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="dotlrn-portlet" package_version="0.1a" locale="ja_JP" charset="utf-8">
-
-  <msg key="Closed">閉鎖済み</msg>
-  <msg key="Open">開く</msg>
-</message_catalog>
