@@ -35,16 +35,16 @@
 
       <li>
         #dotlrn-portlet.lt_Change_Enrollment_Pol# -
-          <if @join_policy@ eq "open">#dotlrn-portlet.Open#</if><else><a href="join-policy-toggle?policy=open">#dotlrn-portlet.Open#</a></else>
-        | <if @join_policy@ eq "closed">#dotlrn-portlet.Closed#</if><else><a href="join-policy-toggle?policy=closed">#dotlrn-portlet.Closed#</a></else>
-        |&nbsp;<if @join_policy@ eq "needs approval">#dotlrn-portlet.Needs_Approval#</if><else><a href="join-policy-toggle?policy=needs%20approval">#dotlrn-portlet.Needs_Approval#</a></else>
+          <if @join_policy@ eq "open"><b>#dotlrn-portlet.Open#</b></if><else><a href="join-policy-toggle?policy=open">#dotlrn-portlet.Open#</a></else>
+        | <if @join_policy@ eq "closed"><b>#dotlrn-portlet.Closed#</b></if><else><a href="join-policy-toggle?policy=closed">#dotlrn-portlet.Closed#</a></else>
+        |&nbsp;<if @join_policy@ eq "needs approval"><b>#dotlrn-portlet.Needs_Approval#</b></if><else><a href="join-policy-toggle?policy=needs%20approval">#dotlrn-portlet.Needs_Approval#</a></else>
       </li>
 <p>
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
       <li>
         #dotlrn-portlet.lt_Change_Bulk_Mail_Poli# -
-          <if @members_can_spam_p@ true>#dotlrn-portlet.All_members#</if><else><a href="spam-policy-toggle?policy=all">#dotlrn-portlet.All_members#</a></else>
-          | <if @members_can_spam_p@ false>#dotlrn-portlet.Only_admins#</if><else><a href="spam-policy-toggle?policy=admins">#dotlrn-portlet.Only_admins#</a></else>
+          <if @members_can_spam_p@ true><b>#dotlrn-portlet.All_members#</b></if><else><a href="spam-policy-toggle?policy=all">#dotlrn-portlet.All_members#</a></else>
+          | <if @members_can_spam_p@ false><b>#dotlrn-portlet.Only_admins#</b></if><else><a href="spam-policy-toggle?policy=admins">#dotlrn-portlet.Only_admins#</a></else>
           #dotlrn-portlet.lt_can_send_bulk_mail_to#
       </li>
   <li><a href="community-edit">Edit Group Properties</a> - Change name, description, etc.</li>
