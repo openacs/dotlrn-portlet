@@ -22,6 +22,7 @@
 
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
+  <li><a href="clone">Copy this group</a></li>
   <br>
 </if>
 

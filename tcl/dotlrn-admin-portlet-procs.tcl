@@ -59,16 +59,13 @@ namespace eval dotlrn_admin_portlet {
 
 	@return element_id The new element's id
     } {
-	set element_id [portal::add_element \
+	return [portal::add_element_parameters \
             -portal_id $portal_id \
             -portlet_name [get_my_name] \
             -force_region [ad_parameter "dotlrn_admin_portlet_force_region" [my_package_key]] \
+            -key community_id \
+            -value $community_id
         ]
-
-        # set the community_id param that this portlet needs
-        portal::set_element_param $element_id "community_id" $community_id
-
-	return $element_id
     }
 
     ad_proc -public remove_self_from_page {
