@@ -43,7 +43,7 @@ namespace eval dotlrn_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return [ad_parameter subcommunities_pretty_plural dotlrn]
+	return [ad_parameter -package_id [dotlrn::get_package_id] subcommunities_pretty_plural]
 
     }
 
