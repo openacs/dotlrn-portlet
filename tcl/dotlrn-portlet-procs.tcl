@@ -109,6 +109,12 @@ namespace eval dotlrn_portlet {
 	}
     }
 
+    ad_proc -public edit { 
+	nothing here, move along
+    } {
+	return ""
+    }
+
     ad_proc -public make_self_available { 
  	page_id 
     } {
