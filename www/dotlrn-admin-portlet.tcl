@@ -23,5 +23,10 @@ db_multirow subgroups select_subgroups {}
 # hack for now
 set n_subgroups 0
 
+# get the right pretty name, plural for subgroups
+set sub_pretty_name [ad_parameter subcommunities_pretty_name]
+set sub_pretty_plural [ad_parameter subcommunities_pretty_plural]
+
+
 ad_return_template
 

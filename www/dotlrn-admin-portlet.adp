@@ -34,12 +34,12 @@
   </li>
 
   <p></p>
-  <li>Subgroups:
+  <li>@sub_pretty_plural@:
         <ul>
         <multiple name="subgroups">
         <li> <a href=@subgroups.community_url@>@subgroups.pretty_name@</a>
         </multiple>
-        <li> <a href=subcommunity-new>New Subgroup</a>
+        <li> <a href=subcommunity-new>New @sub_pretty_name@</a>
         </ul>
   </li>
 

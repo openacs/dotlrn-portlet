@@ -16,8 +16,14 @@ namespace eval dotlrn_portlet {
 
     ad_proc -private my_name {
     } {
-    return "dotlrn_portlet"
+        return "dotlrn_portlet"
     }
+
+    ad_proc -private my_package_key {
+    } {
+        return "dotlrn-portlet"
+    }
+
 
     ad_proc -public get_pretty_name {
     } {
@@ -59,38 +65,14 @@ namespace eval dotlrn_portlet {
     ad_proc -public show { 
 	 cf 
     } {
-	 Display the PE
+	 Call the template to display
     
-	 @return HTML string
 	 @param cf A config array
 	 @author arjun@openforce.net
-	 @creation-date Sept 2001
     } {
-
-	array set config $cf	
-
-	set query "select pretty_name, description 
-	from dotlrn_communities
-	where community_id = $config(community_id)"
-
-	if { $config(shaded_p) == "f" } {
-	    
-	    # for now query the DM directly
-	    if { [db_0or1row select_comminity_info $query] } {
-		set data "$pretty_name - <i>$description</i>"
-	    } else {
-		set data "Group info not found. Contact webmaster, please!"
-	    }
-	    
-	    # BIG BAD THING (fixme: ben)
-	    if {[dotlrn::user_can_read_private_data_p]} {
-		append data "<p><a href=\"members\">List of Members</a>"
-	    }
-	} else {
-	    set data ""
-	}
-	
-	return $data
+        portal::show_proc_helper \
+                -package_key [my_package_key] \
+                -config_list $cf
 
     }
 
