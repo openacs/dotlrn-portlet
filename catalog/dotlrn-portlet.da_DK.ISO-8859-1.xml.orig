@@ -6,8 +6,10 @@
   <msg key="All_members">Alle medlemmer</msg>
   <msg key="Archive">Arkiv</msg>
   <msg key="Archive_this_group">Arkivér denne gruppe</msg>
+  <msg key="change_name_etc">Ændre navn, beskrivelse, osv.</msg>
   <msg key="Closed">Lukket</msg>
   <msg key="Copy_this_group">Kopier denne grupper</msg>
+  <msg key="edit_gr_props">Rediger Gruppens Egenskaber</msg>
   <msg key="Email_Members">Send mail til medlemmer</msg>
   <msg key="lt_AddRemove_pretty_name">Tilføj/Fjern medlemmer af %pretty_name% </msg>
   <msg key="lt_can_send_bulk_mail_to">kan sende massemail til gruppen.</msg>
@@ -16,6 +18,7 @@
   <msg key="lt_Create_a_new_Limited_">Opret en ny bruger med begrænset adgang</msg>
   <msg key="lt_Create_a_new_Limited__1">Opret en ny gæst med begrænset adgang</msg>
   <msg key="lt_Customize_Portal_Layo">Juster portalens layout</msg>
+  <msg key="lt_Guests_Can_View_Membership_Info">Gæstebrugere kan se gruppens medlemskab?</msg>
   <msg key="lt_No_subcomm_pretty_plu">Ingen %subcomm_pretty_plural% </msg>
   <msg key="lt_Only_use_this_to_crea">Brug kun dette til at oprette en konto til en ekstern studerende som ikke har en konto fra en tidligere klasse.</msg>
   <msg key="lt_Only_use_this_to_crea_1">Brug kun dette til at oprette en konto til en ekstern ikke-medlem som ikke har en konto. Oplysninger omkring andre medlemmer af gruppen vil ikke være tilgængelige for denne bruger.</msg>
