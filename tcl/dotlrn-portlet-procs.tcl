@@ -19,6 +19,11 @@ namespace eval dotlrn_portlet {
     return "dotlrn-portlet"
     }
 
+    ad_proc -public get_pretty_name {
+    } {
+	return "Class Information"
+    }
+
     ad_proc -public add_self_to_page { 
 	page_id 
 	community_id
