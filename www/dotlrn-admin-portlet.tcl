@@ -11,6 +11,15 @@ ad_page_contract {
 }
 
 array set config $cf	
+set community_id $config(community_id)
+
+set dotlrn_admin_p [dotlrn::admin_p]
+set dotlrn_admin_url "[dotlrn::get_url]/admin"
+
+db_1row select_community_info {}
+
+# hack for now
+set n_subgroups 0
 
 ad_return_template
 
