@@ -47,7 +47,7 @@
           | <if @members_can_spam_p@ false><b>#dotlrn-portlet.Only_admins#</b></if><else><a href="spam-policy-toggle?policy=admins">#dotlrn-portlet.Only_admins#</a></else>
           #dotlrn-portlet.lt_can_send_bulk_mail_to#
       </li>
-  <li><a href="community-edit">Edit Group Properties</a> - Change name, description, etc.</li>
+  <li><a href="community-edit">#dotlrn-portlet.edit_gr_props#</a> - #dotlrn-portlet.change_name_etc#</li>
 
 <if @subcommunity_p@ eq 0>
 <p>
