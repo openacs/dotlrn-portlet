@@ -33,11 +33,11 @@
       <i>@users.role@</i>
 
     <if @admin_p@ eq 1>
-      <small>[<a href="deregister?user_id=@users.user_id@&amp;referer=members">deregister</a>]</small>
+      [<small> <a href="deregister?user_id=@users.user_id@&amp;referer=members">deregister</a> </small>]
     </if>
     <else>
       <if @user_id@ eq @users.user_id@>
-        <small>[<a href="deregister?">deregister</a>]</small>
+        [<small> <a href="deregister?">deregister</a> </small>]
       </if>
     </else>
     </li>
@@ -53,7 +53,6 @@
       <input type="hidden" name="referer" value="@referer@">
     </form>
 </if>
-
 
 </if>
 <else>

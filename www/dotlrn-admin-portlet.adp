@@ -58,15 +58,13 @@
         <multiple name="subgroups">
           <li>
             <a href="@subgroups.url@">@subgroups.pretty_name@</a>
-            <small>
-              [
-                <a href="@subgroups.url@one-community-admin">Admin</a>
-                |
-                <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
-                |
-                <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
-              ]
-            </small>
+            [<small>
+              <a href="@subgroups.url@one-community-admin">Admin</a>
+              |
+              <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
+              |
+              <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
+            </small>]
           </li>
         </multiple>
         <br>
