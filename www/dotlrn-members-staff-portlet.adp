@@ -6,8 +6,6 @@ Professors:
   <if @dotlrn_instructor_rel:rowcount@ gt 0>
   <multiple name="dotlrn_instructor_rel">
   
- <%= ad_return_complaint 1 "[array get dotlrn_instructor_rel]" %>
-  
   <li>
        @dotlrn_instructor_rel.member_link@
        <if @read_private_data_p@ eq 1 or @user_id@ eq @dotlrn_instructor_rel.user_id@>
@@ -69,3 +67,4 @@ Course Assistants:
 <br>
 
 FIXME: student list link 
+</if>
