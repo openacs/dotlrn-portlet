@@ -31,7 +31,7 @@ set user_id [ad_conn user_id]
 set referer [ad_conn url]
 set community_id $config(community_id)
 
-set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id $community_id]
+set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id -community_id $community_id]
 set read_private_data_p [dotlrn::user_can_read_private_data_p -user_id $user_id]
 
 # get all the users in a list of ns_sets
@@ -56,5 +56,3 @@ foreach one_user_set $all_users_list {
 template::util::list_of_ns_sets_to_multirow \
     -rows $all_users_list \
     -var_name "users"
-
-
