@@ -10,7 +10,7 @@
     <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
       (<a href="mailto:@users.email@">@users.email@</a>)
     </if>
-      <i><%= [dotlrn_community::get_role_pretty_name_from_rel_type -rel_type $users(rel_type)] %></i>
+      <i>@users.role@</i>
 
     <if @admin_p@ eq 1>
       <small>[<a href="deregister?user_id=@users.user_id@&amp;referer=members">deregister</a>]</small>
