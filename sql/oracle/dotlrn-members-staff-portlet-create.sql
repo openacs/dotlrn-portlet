@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2001, 2002 OpenForce, Inc.
+--  Copyright (C) 2001, 2002 MIT
 --
 --  This file is part of dotLRN.
 --
@@ -18,7 +18,7 @@
 
 -- Creates dotlrn datasource for showing staff members for a comunity
 
--- Copyright (C) 2001 OpenForce, Inc.
+-- Copyright (C) 2001 MIT
 -- @author Arjun Sanyal (arjun@openforce.net)
 -- @creation-date 2001-30-09
 
