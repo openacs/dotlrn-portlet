@@ -54,11 +54,13 @@
   <li>@sub_pretty_plural@
     <ul>
       <multiple name="subgroups">
-        <li><a href=@subgroups.url@>@subgroups.pretty_name@</a><small>
-            [<a href=@subgroups.url@one-community-admin>Admin</a> |
-            <a href=subcommunity-delete>Delete</a>]</small>
+        <li><a href="@subgroups.url@">@subgroups.pretty_name@</a><br>
+            <small>
+            [<a href="@subgroups.url@one-community-admin">Admin</a>
+            | <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>]
+            </small>
       </multiple>
-      <li><a href=subcommunity-new>New @sub_pretty_name@</a></ul>
+      <li><a href="subcommunity-new">New @sub_pretty_name@</a></ul>
   </li>
   
   <li><a href="applets">Manage Applets</a></li>
