@@ -46,7 +46,7 @@
         #dotlrn-portlet.lt_Change_Enrollment_Pol# -
           <if @join_policy@ eq "open">#dotlrn-portlet.Open#</if><else><a href="join-policy-toggle?policy=open">#dotlrn-portlet.Open#</a></else>
         | <if @join_policy@ eq "closed">#dotlrn-portlet.Closed#</if><else><a href="join-policy-toggle?policy=closed">#dotlrn-portlet.Closed#</a></else>
-        |&nbsp;<if @join_policy@ eq "needs approval">Needs&nbsp;Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs&nbsp;Approval</a></else>
+        |&nbsp;<if @join_policy@ eq "needs approval">#dotlrn-portlet.Needs_Approval#</if><else><a href="join-policy-toggle?policy=needs%20approval">#dotlrn-portlet.Needs_Approval#</a></else>
       </li>
       <li>
         <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">#dotlrn-portlet.lt_Add_a_Limited_Access_#</a>
