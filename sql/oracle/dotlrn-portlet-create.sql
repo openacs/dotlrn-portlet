@@ -1,8 +1,8 @@
 --
--- packages/bboard-portlet/sql/bboard-portlets-create.sql
+-- packages/dotlrn-portlet/sql/oracle/dotlrn-portlets-create.sql
 --
 
--- Creates bboard datasources for portal portlets
+-- Creates dotlrn datasource
 
 -- Copyright (C) 2001 OpenForce, Inc.
 -- @author Arjun Sanyal (arjun@openforce.net)
@@ -20,9 +20,9 @@ begin
   ds_id := portal_datasource.new(
     data_type        => 'tcl_proc',
     mime_type        => 'text/html',
-    name             => 'bboard-portlet',
-    description      => 'Displays the bboard for a given instance_id ',
-    content	     => 'bboard_portlet::show',
+    name             => 'dotlrn-portlet',
+    description      => 'Displays the dotlrn community info ',
+    content	     => 'dotlrn_portlet::show',
     configurable_p   => 't'
   );
 
