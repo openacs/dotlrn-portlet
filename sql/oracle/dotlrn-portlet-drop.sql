@@ -1,8 +1,8 @@
 --
--- packages/bboard-portlets/sql/bboard-portlets-drop.sql
+-- packages/dotlrn-portlet/sql/oracle/dotlrn-portlet-drop.sql
 --
 
--- Drops bboard datasources for portal portlets
+-- Drops dotlrn PE
 
 -- Copyright (C) 2001 Openforce, Inc. 
 -- @author Arjun Sanyal (arjun@openforce.net)
@@ -21,7 +21,7 @@ begin
   begin 
     select datasource_id into ds_id
       from portal_datasources
-     where name = 'bboard-portlet';
+     where name = 'dotlrn-portlet';
    exception when no_data_found then
      ds_id := null;
   end;
