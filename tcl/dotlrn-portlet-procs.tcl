@@ -27,7 +27,8 @@ namespace eval dotlrn_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Subgroups Plus"
+	return [ad_parameter subcommunities_pretty_plural dotlrn]
+
     }
 
     ad_proc -public link {

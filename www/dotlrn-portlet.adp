@@ -1,7 +1,5 @@
 <if @config.shaded_p@ ne "t">
 
-  @pretty_name@ - <i>@description@</i>
-
   <if @has_subcomm_p@ eq 1>
 
     <P>
@@ -14,6 +12,10 @@
   
     </ul>
   </if>
+  <else>
+    <small>No @subcomm_pretty_plural@</small>
+  </else>
+
 </if>
 <else>
   <br>
