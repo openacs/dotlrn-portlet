@@ -83,7 +83,7 @@ namespace eval dotlrn_portlet {
 	    }
 	    
 	    # BIG BAD THING (fixme: ben)
-	    if {[dotlrn::user_can_read_sensitive_data_p]} {
+	    if {[dotlrn::user_can_read_private_data_p]} {
 		append data "<p><a href=student-list>List of Students</a>"
 	    }
 	} else {
