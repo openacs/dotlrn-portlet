@@ -19,7 +19,7 @@ ad_library {
     Procedures to supports dotlrn admin portlets
 
     @creation-date September 30 2001
-    @author arjun@openforce.net 
+    @author arjun@openforce.net
     @author ben@openforce.net
     @version $Id$
 
@@ -47,21 +47,22 @@ namespace eval dotlrn_admin_portlet {
 	return ""
     }
 
-    ad_proc -public add_self_to_page { 
-	admin_portal_id 
-	community_id
+    ad_proc -public add_self_to_page {
+	{-portal_id:required}
+	{-community_id:required}
     } {
 	Adds the dotlrn admin PE to the given page with the community_id as
         as parameter
-    
+
 	@param portal_id The page to add self to
 	@param community_id The dotlrn community to show info about
+
 	@return element_id The new element's id
     } {
 	set element_id [portal::add_element \
-                -portal_id $admin_portal_id \
-                -portlet_name [get_my_name] \
-                -force_region [ad_parameter "dotlrn_admin_portlet_force_region" [my_package_key]]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name] \
+            -force_region [ad_parameter "dotlrn_admin_portlet_force_region" [my_package_key]] \
         ]
 
         # set the community_id param that this portlet needs
@@ -70,27 +71,24 @@ namespace eval dotlrn_admin_portlet {
 	return $element_id
     }
 
-    ad_proc -public remove_self_from_page { 
-        portal_id 
+    ad_proc -public remove_self_from_page {
+        portal_id
     } {
 	Removes a dotlrn PE from the given portal
     } {
 	portal::remove_element \
-                -portal_id $portal_id \
-                -portlet_name [get_my_name]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name]
     }
 
-    ad_proc -public show { 
-	 cf 
+    ad_proc -public show {
+	 cf
     } {
     } {
         portal::show_proc_helper \
-                -package_key [my_package_key] \
-                -config_list $cf \
-                -template_src "dotlrn-admin-portlet"
+            -package_key [my_package_key] \
+            -config_list $cf \
+            -template_src "dotlrn-admin-portlet"
     }
 
 }
-
- 
-

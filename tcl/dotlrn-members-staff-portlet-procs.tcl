@@ -18,7 +18,7 @@ ad_library {
 
     Procedures to supports the dotlrn "members staff" portlet aka "Staff List"
 
-    @author arjun@openforce.net 
+    @author arjun@openforce.net
     @cvs-id $Id$
 }
 
@@ -44,55 +44,51 @@ namespace eval dotlrn_members_staff_portlet {
 	return ""
     }
 
-    ad_proc -public add_self_to_page { 
-	portal_id 
-	community_id
+    ad_proc -public add_self_to_page {
+	{-portal_id:required}
+	{-community_id:required}
     } {
         Add the "dotlrn members staff" portlet to the page
     } {
         set force_region [ad_parameter \
-                "dotlrn_members_staff_portlet_force_region" \
-                [my_package_key]
+            "dotlrn_members_staff_portlet_force_region" \
+            [my_package_key] \
         ]
 
         set element_id [portal::add_element \
-                -portal_id $portal_id \
-                -pretty_name [get_pretty_name] \
-                -portlet_name [get_my_name] \
-                -force_region $force_region
+            -portal_id $portal_id \
+            -pretty_name [get_pretty_name] \
+            -portlet_name [get_my_name] \
+            -force_region $force_region
         ]
 
-        portal::set_element_param $element_id "community_id" $community_id 
+        portal::set_element_param $element_id community_id $community_id
 
-        return $element_id        
+        return $element_id
     }
 
-    ad_proc -public remove_self_from_page { 
-        portal_id 
-        community_id 
+    ad_proc -public remove_self_from_page {
+        portal_id
+        community_id
     } {
-	Removes the PE from the given page 
+	Removes the PE from the given page
     } {
         portal::remove_element \
-                -portal_id $portal_id \
-                -portlet_name [get_my_name]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name]
     }
 
-    ad_proc -public show { 
-	 cf 
+    ad_proc -public show {
+	 cf
     } {
 	 Call the template to display
-    
+
 	 @param cf A config array
     } {
         portal::show_proc_helper \
-                -package_key [my_package_key] \
-                -config_list $cf \
-                -template_src "dotlrn-members-staff-portlet"
+            -package_key [my_package_key] \
+            -config_list $cf \
+            -template_src "dotlrn-members-staff-portlet"
     }
 
-
 }
-
- 
-

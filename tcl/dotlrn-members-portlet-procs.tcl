@@ -17,8 +17,8 @@
 ad_library {
 
     Procedures to support the dotlrn "members" portlet
-    
-    @author arjun@openforce.net 
+
+    @author arjun@openforce.net
     @cvs-id $Id$
 
 }
@@ -46,44 +46,45 @@ namespace eval dotlrn_members_portlet {
 	return ""
     }
 
-    ad_proc -public add_self_to_page { 
-        {-page_id ""}
-	portal_id 
-	community_id
+    ad_proc -public add_self_to_page {
+	{-portal_id:required}
+        {-page_name ""}
+	{-community_id:required}
     } {
-        Adds the dotlrn "members" portlet to the given portal. 
+        Adds the dotlrn "members" portlet to the given portal.
         Pass along the community_id
     } {
+        ns_log notice "XXX dotlrn_members_portlet::add_self_to_page portal_id is $portal_id; page_name is $page_name; community_id is $community_id"
         set element_id [portal::add_element \
-                    -pretty_name [get_pretty_name] \
-                    -portal_id $portal_id \
-                    -page_id $page_id \
-                    -portlet_name [get_my_name] 
+            -pretty_name [get_pretty_name] \
+            -portal_id $portal_id \
+            -page_name $page_name \
+            -portlet_name [get_my_name]
         ]
 
-        portal::set_element_param $element_id "community_id" $community_id
+        portal::set_element_param $element_id community_id $community_id
+
         return $element_id
     }
 
-    ad_proc -public show { 
-	 cf 
+    ad_proc -public show {
+	 cf
     } {
     } {
         portal::show_proc_helper \
-                -package_key [my_package_key] \
-                -config_list $cf \
-                -template_src "dotlrn-members-portlet"
+            -package_key [my_package_key] \
+            -config_list $cf \
+            -template_src "dotlrn-members-portlet"
     }
 
-    ad_proc -public remove_self_from_page { 
-        portal_id 
+    ad_proc -public remove_self_from_page {
+        portal_id
     } {
 	Removes the dotlrn "memebers"  PE from the given portal
     } {
         portal::remove_element \
-                -portal_id $portal_id \
-                -portlet_name [get_my_name]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name]
     }
-}
- 
 
+}

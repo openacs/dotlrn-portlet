@@ -16,13 +16,13 @@
 
 ad_library {
 
-    Procedures to supports the "dotlrn" portlet. The "dotlrn" portlet shows 
+    Procedures to supports the "dotlrn" portlet. The "dotlrn" portlet shows
     the subcommunities of the community's portal where it's located. This portal
-    is not to be confused with the "dotlrn-main" portal, that goes on user's 
-    workspace portals and shows the communities that they are members of. 
+    is not to be confused with the "dotlrn-main" portal, that goes on user's
+    workspace portals and shows the communities that they are members of.
 
     @creation-date September 30 2001
-    @author arjun@openforce.net 
+    @author arjun@openforce.net
     @cvs-id $Id$
 
 }
@@ -50,46 +50,48 @@ namespace eval dotlrn_portlet {
 	return ""
     }
 
-    ad_proc -public add_self_to_page { 
-	portal_id 
-	community_id
+    ad_proc -public add_self_to_page {
+	{-portal_id:required}
+	{-community_id:required}
     } {
 	Adds a dotlrn PE to the given communities's portal
-    
-	@param portal_id 
+
+	@param portal_id
 	@param community_id
+
 	@return element_id The new element's id
     } {
+        ns_log notice "XXX dotlrn_portlet::add_self_to_page portal_id is $portal_id; community_id is $community_id"
 	set element_id [portal::add_element \
-                -portal_id $portal_id \
-                -portlet_name [get_my_name] \
-                -pretty_name [get_pretty_name] \
-                -force_region [ad_parameter "dotlrn_portlet_force_region" [my_package_key]]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name] \
+            -pretty_name [get_pretty_name] \
+            -force_region [ad_parameter "dotlrn_portlet_force_region" [my_package_key]] \
         ]
 
-	portal::set_element_param $element_id "community_id" $community_id
+	portal::set_element_param $element_id community_id $community_id
 
 	return $element_id
     }
 
-    ad_proc -public show { 
-	 cf 
+    ad_proc -public show {
+	 cf
     } {
     } {
         portal::show_proc_helper \
-                -package_key [my_package_key] \
-                -config_list $cf
+            -package_key [my_package_key] \
+            -config_list $cf
     }
 
-    ad_proc -public remove_self_from_page { 
-	  portal_id 
+    ad_proc -public remove_self_from_page {
+	  portal_id
     } {
-	Removes the dotlrn PE from the portal. 
+	Removes the dotlrn PE from the portal.
     } {
         # since there can be only one dotlrn pe on the portal use:
         portal::remove_element \
-                -portal_id $portal_id \
-                -portlet_name [get_my_name]
+            -portal_id $portal_id \
+            -portlet_name [get_my_name]
     }
 
 }
