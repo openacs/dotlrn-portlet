@@ -18,7 +18,6 @@
 
 %>
 
-
 <ul>
 
 <if @dotlrn_admin_p@ eq 1>
@@ -26,7 +25,10 @@
   <br>
 </if>
 
-  <li><a href="one-community-portal-configure">Customize This Portal</a></li>
+  <li><a href="community-edit">Edit the properties of this group</a></li>
+  <br>
+
+  <li><a href="one-community-portal-configure">Customize layout</a></li>
   <br>
 
   <li>
@@ -34,10 +36,10 @@
     <ul>
       <li><a href="members">Manage Membership</a> - Add/Remove @pretty_name@ members</li>
       <li>
-        Change Enrollment Policy
-        - <if @join_policy@ eq "closed">closed</if><else><a href="join-policy-toggle?policy=closed">closed</a></else>
-        | <if @join_policy@ eq "open">open</if><else><a href="join-policy-toggle?policy=open">open</a></else>
-        | <if @join_policy@ eq "needs approval">wait</if><else><a href="join-policy-toggle?policy=needs%20approval">wait</a></else>
+        Change Enrollment Policy -
+          <if @join_policy@ eq "open">Open</if><else><a href="join-policy-toggle?policy=open">Open</a></else>
+        | <if @join_policy@ eq "closed">Closed</if><else><a href="join-policy-toggle?policy=closed">Closed</a></else>
+        | <if @join_policy@ eq "needs approval">Needs Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs Approval</a></else>
       </li>
       <li>
         <a href="user-add?type=student&access_level=limited&read_private_data_p=t">Add a Limited Access user to this community</a>
@@ -59,7 +61,7 @@
           <li>
             <a href="@subgroups.url@">@subgroups.pretty_name@</a>
             [<small>
-              <a href="@subgroups.url@one-community-admin">Admin</a>
+              <a href="@subgroups.url@one-community-admin">Administer</a>
               |
               <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
               |
