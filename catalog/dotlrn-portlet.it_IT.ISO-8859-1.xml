@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.0.3" locale="it_IT" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.1.0b1" locale="it_IT" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Amministrazione del gruppo</msg>
   <msg key="Administer">Amministra</msg>
@@ -10,7 +10,7 @@
   <msg key="Copy_this_group">Copia questo gruppo</msg>
   <msg key="Email_Members">Invia un email ai membri</msg>
   <msg key="lt_AddRemove_pretty_name">Aggiungi/Rimuovi membri di %pretty_name%</msg>
-  <msg key="lt_can_send_bulk_mail_to">può inviare email di massa a questa comunit&amp;agrave;</msg>
+  <msg key="lt_can_send_bulk_mail_to">può inviare email di massa a questa comunità</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Cambia la politica di invio di massa</msg>
   <msg key="lt_Change_Enrollment_Pol">Cambia la politica di arruolamento</msg>
   <msg key="lt_Create_a_new_Limited_">Crea un nuovo utente con accesso limitato</msg>
@@ -18,9 +18,9 @@
   <msg key="lt_Customize_Portal_Layo">Personalizza l'impaginazione degli elementi del portale</msg>
   <msg key="lt_No_subcomm_pretty_plu">Nessun sottogruppo</msg>
   <msg key="lt_Only_use_this_to_crea">Usa questa opzione solo per creare un'account per studenti registrati altrove che non hanno account in classi precedenti.</msg>
-  <msg key="lt_Only_use_this_to_crea_1">Usa questa opzione solo per creare account per utenti non affiliati che non sono ancora registrati. Le informazioni riguardo i membri di questa comunit&amp;agrave; non saranno disponibili agli altri utenti.</msg>
-  <msg key="lt_Sorry_this_functional">Spiacente, questa funzionalit&amp;agrave; non è disponibile per gli ospiti.</msg>
-  <msg key="lt_This_group_is_archive">Questo gruppo &amp;egrave; archiviato</msg>
+  <msg key="lt_Only_use_this_to_crea_1">Usa questa opzione solo per creare account per utenti non affiliati che non sono ancora registrati. Le informazioni riguardo i membri di questa comunità non saranno disponibili agli altri utenti.</msg>
+  <msg key="lt_Sorry_this_functional">Spiacente, questa funzionalità non è disponibile per gli ospiti.</msg>
+  <msg key="lt_This_group_is_archive">Questo gruppo è archiviato</msg>
   <msg key="Manage_Applets">Amministra le applet</msg>
   <msg key="Manage_Membership">Amministra l'associazione</msg>
   <msg key="Member_List">Elenco dei membri</msg>

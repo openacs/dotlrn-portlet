@@ -65,7 +65,6 @@
 <if @subcommunity_p@ eq 0>
 <p>
 
-  <ul>
   <if @club_p@ eq 0>
     <if @create_limited_user_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
       <li>
@@ -79,9 +78,7 @@
         - #dotlrn-portlet.lt_Only_use_this_to_crea_1#
      </li>
    </if>
-</ul>
 </if>
-</ul>
 
   <br>
 
