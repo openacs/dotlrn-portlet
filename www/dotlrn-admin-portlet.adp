@@ -26,7 +26,7 @@
   </if>
 
   <li>
-    <a href="one-community-portal-template">Customize This Portal</a>
+    <a href="one-community-portal-configure">Customize This Portal</a>
   </li>
 
   <li>
@@ -64,6 +64,9 @@
       <li><a href="subcommunity-new">New @sub_pretty_name@</a></ul>
   </li>
   
+  <if @dotlrn_admin_p@ eq 1 and @subcommunity_p@ eq 0>
+    <li><a href="clone">&quot;Clone&quot; this community</a>
+  </if>
   <li><a href="applets">Manage Applets</a></li>
 
 </ul>
