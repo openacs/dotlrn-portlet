@@ -32,10 +32,10 @@
 <multiple name="users">
 <group column="role">
 <if @users.rownum@ odd>
-<tr class="z_light">
+<tr class="odd">
 </if>
 <else>
-<tr class="z_dark">
+<tr class="even">
 </else>
 
 <td>
