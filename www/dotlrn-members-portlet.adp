@@ -60,7 +60,7 @@
 <if @spam_p@ true>
 <p>
 <ul>
-  <li><a href="spam?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a></li>
+  <li><a href="spam-recipients?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a></li>
 </ul>
 </p>
 </if>
