@@ -67,10 +67,10 @@ namespace eval dotlrn_portlet {
 	where community_id = $config(community_id)"
 
 	if { $config(shaded_p) == "f" } {
-		    
+	    
 	    # for now query the DM directly
 	    if { [db_0or1row select_comminity_info $query] } {
-		set data "$pretty_name - <i>descriptions not available yet</i>"
+		set data "$pretty_name - <i>$description</i>"
 	    } else {
 		set data "Community info not found. Contact webmaster, please!"
 	    }
