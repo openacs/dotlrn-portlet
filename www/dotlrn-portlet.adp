@@ -6,7 +6,7 @@
 
     <P>
 
-    Subcommunities: <P>
+    @subcomm_pretty_plural@: <P>
   
     <ul>
 
