@@ -14,4 +14,5 @@
         and groups.group_id = community_id
     </querytext>
   </fullquery>
+
 </queryset>

@@ -33,10 +33,15 @@
     </ul>
   </li>
 
-<if @n_subgroups@ gt 0>
   <p></p>
-  <li><include src="subgroups"></li>
-</if>
+  <li>Subgroups:
+        <ul>
+        <multiple name="subgroups">
+        <li> <a href=@subgroups.community_url@>@subgroups.pretty_name@</a>
+        </multiple>
+        <li> <a href=subcommunity-new>New Subgroup</a>
+        </ul>
+  </li>
 
   <p></p>
   <li><a href="applets">Manage Applets</a></li>

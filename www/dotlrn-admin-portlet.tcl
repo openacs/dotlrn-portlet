@@ -18,6 +18,8 @@ set dotlrn_admin_url "[dotlrn::get_url]/admin"
 
 db_1row select_community_info {}
 
+db_multirow subgroups select_subgroups {}
+
 # hack for now
 set n_subgroups 0
 
