@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-portlet" package_version="0.1a" locale="hu_HU" charset="utf-8">
+
+  <msg key="Member_List">Tagok listája</msg>
+  <msg key="members_staff_portlet_pretty_name">Munkatársak</msg>
+  <msg key="no_teaching_assistant_members">Nincsenek tanársegédek</msg>
+</message_catalog>
