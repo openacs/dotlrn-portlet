@@ -29,7 +29,7 @@ namespace eval dotlrn_admin_portlet {
 
     ad_proc -private get_my_name {
     } {
-    return "dotlrn_admin_portlet"
+        return "dotlrn_admin_portlet"
     }
 
     ad_proc -public get_pretty_name {
