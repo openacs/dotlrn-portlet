@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.0.3" locale="pt_BR" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.1.0b1" locale="pt_BR" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Administração do Grupo</msg>
   <msg key="Administer">Administrar</msg>
   <msg key="All_members">Todos os membros</msg>
   <msg key="Archive">Arquivo</msg>
   <msg key="Archive_this_group">Arquivar este grupo</msg>
+  <msg key="change_name_etc">Alterar nome, descrição, etc.</msg>
   <msg key="Closed">Fechado</msg>
   <msg key="Copy_this_group">Copiar este grupo</msg>
+  <msg key="edit_gr_props">Editar Propriedades do Grupo</msg>
   <msg key="Email_Members">Enviar Correio para Membros</msg>
   <msg key="lt_AddRemove_pretty_name">Adicionar/Remover membros de %pretty_name%</msg>
   <msg key="lt_can_send_bulk_mail_to">pode enviar correio massivo para esta comunidade</msg>
@@ -16,6 +18,7 @@
   <msg key="lt_Create_a_new_Limited_">Criar um novo usuário de Acesso Limitado</msg>
   <msg key="lt_Create_a_new_Limited__1">Criar um novo usuário Convidado de Acesso Limitado</msg>
   <msg key="lt_Customize_Portal_Layo">Personalizar Disposição</msg>
+  <msg key="lt_Guests_Can_View_Membership_Info">Exibir informações de adesão para convidados?</msg>
   <msg key="lt_No_subcomm_pretty_plu">Não há %subcomm_pretty_plural%</msg>
   <msg key="lt_Only_use_this_to_crea">Use isto só para criar uma conta para estudantes com registro cruzado que não tenham conta de uma aula prévia.</msg>
   <msg key="lt_Only_use_this_to_crea_1">Use isto só para criar uma conta para estudantes não-filiados que não tenham ainda conta. Este usuário não disporá de informação sobre o resto de membros desta comunidade.</msg>
