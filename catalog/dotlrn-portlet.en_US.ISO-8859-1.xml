@@ -6,10 +6,8 @@
   <msg key="All_members">All members</msg>
   <msg key="Archive">Archive</msg>
   <msg key="Archive_this_group">Archive this group</msg>
-  <msg key="change_name_etc">Change name, description, etc.</msg>
   <msg key="Closed">Closed</msg>
   <msg key="Copy_this_group">Copy this group</msg>
-  <msg key="edit_gr_props">Edit Group Properties</msg>
   <msg key="Email_Members">Email Members</msg>
   <msg key="lt_AddRemove_pretty_name">Add/Remove %pretty_name% members</msg>
   <msg key="lt_can_send_bulk_mail_to">can send bulk mail to this community.</msg>

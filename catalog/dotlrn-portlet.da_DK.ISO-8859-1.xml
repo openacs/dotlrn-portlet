@@ -15,8 +15,8 @@
   <msg key="lt_Change_Enrollment_Pol">Ændr indskrivningspolitik</msg>
   <msg key="lt_Create_a_new_Limited_">Opret en nyt bruger med begrænset adgang</msg>
   <msg key="lt_Create_a_new_Limited__1">Opret en nyt gæst med begrænset adgang</msg>
-  <msg key="lt_Customize_Portal_Layo">Ret portal layout</msg>
-  <msg key="lt_No_subcomm_pretty_plu">Ingen %subcomm_pretty_plural% </msg>
+  <msg key="lt_Customize_Portal_Layo">Personliggør portalens layout</msg>
+  <msg key="lt_No_subcomm_pretty_plu">Intet %subcomm_pretty_plural% </msg>
   <msg key="lt_Only_use_this_to_crea">Brug kun dette til at oprette en konto til en kryds-refereret studerende, som ikke har en konto fra en tidligere klasse.</msg>
   <msg key="lt_Only_use_this_to_crea_1">Brug kun dette til at oprette en konto til en ikke-tilhørende brugeren, som ikke har en konto. Informationer omkring andre medlemmer af fællesskabet vil ikke være tilgængelige for denne bruger.</msg>
   <msg key="lt_Sorry_this_functional">Ked af det, men denne funktion er ikke tilgængelig for gæster</msg>
@@ -32,7 +32,7 @@
   <msg key="no_instructor_members">Ingen %instructor_role_pretty_plural%</msg>
   <msg key="no_teaching_assistant_members">Ingen %teaching_assistant_role_pretty_plural%</msg>
   <msg key="Only_admins">Kun administratorer</msg>
-  <msg key="Open">Åben</msg>
+  <msg key="Open">Åbn</msg>
   <msg key="Sort">Sortér</msg>
   <msg key="Sortmanage">Sortér/håndtér</msg>
 </message_catalog>
