@@ -29,6 +29,10 @@
   <else>
     <li><a href="subcommunity-archive">#dotlrn-portlet.Archive_this_group#</a></li>
   </else>
+  <li>
+    #dotlrn-portlet.lt_Guests_Can_View_Membership_Info# -
+      <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes">Yes</a>&nbsp;|&nbsp;<b>No</b></else>
+  </li>
   <br>
 </if>
      <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_AddRemove_pretty_name#</li>

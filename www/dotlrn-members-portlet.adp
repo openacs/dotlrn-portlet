@@ -41,7 +41,7 @@
     <td>
       <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
     </td>
-    <td>    
+    <td>
       <a href="mailto:@users.email@">@users.email@</a>
     </td>
     <td>
