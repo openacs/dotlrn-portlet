@@ -54,16 +54,14 @@ namespace eval dotlrn_members_portlet {
         Adds the dotlrn "members" portlet to the given portal.
         Pass along the community_id
     } {
-        set element_id [portal::add_element \
-            -pretty_name [get_pretty_name] \
-            -portal_id $portal_id \
-            -page_name $page_name \
-            -portlet_name [get_my_name]
+        return [portal::add_element_parameters \
+                    -pretty_name [get_pretty_name] \
+                    -portal_id $portal_id \
+                    -page_name $page_name \
+                    -portlet_name [get_my_name] \
+                    -key "community_id" \
+                    -value $community_id
         ]
-
-        portal::set_element_param $element_id community_id $community_id
-
-        return $element_id
     }
 
     ad_proc -public remove_self_from_page {

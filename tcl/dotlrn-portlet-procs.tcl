@@ -42,7 +42,7 @@ namespace eval dotlrn_portlet {
     ad_proc -public get_pretty_name {
     } {
         # get the param from the dotlrn package
-	return [ad_parameter subcommunities_pretty_plural dotlrn]
+	return [dotlrn::parameter -name subcommunities_pretty_plural]
     }
 
     ad_proc -public link {
@@ -61,14 +61,19 @@ namespace eval dotlrn_portlet {
 
 	@return element_id The new element's id
     } {
-	set element_id [portal::add_element \
-            -portal_id $portal_id \
-            -portlet_name [get_my_name] \
-            -pretty_name [get_pretty_name] \
-            -force_region [ad_parameter "dotlrn_portlet_force_region" [my_package_key]] \
+        set force_region [parameter::get_from_package_key \
+                              -package_key [my_package_key] \
+                              -parameter "dotlrn_portlet_force_region"
         ]
 
-	portal::set_element_param $element_id community_id $community_id
+        set element_id [portal::add_element_parameters \
+                            -portal_id $portal_id \
+                            -portlet_name [get_my_name] \
+                            -pretty_name [get_pretty_name] \
+                            -force_region $force_region \
+                            -key "community_id" \
+                            -value $community_id
+        ]
 
 	return $element_id
     }

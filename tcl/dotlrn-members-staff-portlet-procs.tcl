@@ -50,21 +50,19 @@ namespace eval dotlrn_members_staff_portlet {
     } {
         Add the "dotlrn members staff" portlet to the page
     } {
-        set force_region [ad_parameter \
-            "dotlrn_members_staff_portlet_force_region" \
-            [my_package_key] \
+        set force_region [parameter::get_from_package_key \
+                              -package_key [my_package_key] \
+                              -parameter "dotlrn_members_staff_portlet_force_region"
         ]
 
-        set element_id [portal::add_element \
-            -portal_id $portal_id \
-            -pretty_name [get_pretty_name] \
-            -portlet_name [get_my_name] \
-            -force_region $force_region
+        return [portal::add_element_parameters \
+                    -portal_id $portal_id \
+                    -pretty_name [get_pretty_name] \
+                    -portlet_name [get_my_name] \
+                    -force_region $force_region \
+                    -key "community_id" \
+                    -value $community_id
         ]
-
-        portal::set_element_param $element_id community_id $community_id
-
-        return $element_id
     }
 
     ad_proc -public remove_self_from_page {
