@@ -65,15 +65,20 @@ namespace eval dotlrn_portlet {
 	set query "select pretty_name, description 
 	from dotlrn_communities
 	where community_id = $config(community_id)"
-		
-	# for now query the DM directly
-	if { [db_0or1row select_comminity_info $query] } {
-	    set data "$pretty_name - <i>descriptions not available yet</i>"
-	} else {
-	    set data "Community info not found. Contact webmaster, please!"
-	}
 
-	append data "<p><a href=student-list>List of Students</a>"
+	if { $config(shaded_p) == "f" } {
+		    
+	    # for now query the DM directly
+	    if { [db_0or1row select_comminity_info $query] } {
+		set data "$pretty_name - <i>descriptions not available yet</i>"
+	    } else {
+		set data "Community info not found. Contact webmaster, please!"
+	    }
+	    
+	    append data "<p><a href=student-list>List of Students</a>"
+	} else {
+	    set data ""
+	}
 	
 	return $data
 
