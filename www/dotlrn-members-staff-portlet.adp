@@ -78,6 +78,7 @@
   </else>
   </ul>
 
+<if @read_private_data_p@>
 <br>
-
 <a href="members"><%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_student_rel] %> List</a>
+</if>
