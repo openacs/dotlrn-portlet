@@ -13,16 +13,16 @@ Licensed under GNU GPL v2
 
 }
 
-namespace eval dotlrn_portlet {
+namespace eval dotlrn_admin_portlet {
 
     ad_proc -private my_name {
     } {
-    return "dotlrn_portlet"
+    return "dotlrn_admin_portlet"
     }
 
     ad_proc -public get_pretty_name {
     } {
-	return "Group Information"
+	return "Group Administration"
     }
 
     ad_proc -public my_package_key {
