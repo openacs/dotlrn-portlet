@@ -21,13 +21,13 @@
 
 <ul>
 
-  <if @dotlrn_admin_p@ eq 1>
-    <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a>
-  </if>
+<if @dotlrn_admin_p@ eq 1>
+  <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
+  <br>
+</if>
 
-  <li>
-    <a href="one-community-portal-configure">Customize This Portal</a>
-  </li>
+  <li><a href="one-community-portal-configure">Customize This Portal</a></li>
+  <br>
 
   <li>
     Membership
@@ -50,24 +50,29 @@
       </li>
     </ul>
   </li>
+  <br>
 
   <li>@sub_pretty_plural@
     <ul>
       <multiple name="subgroups">
-        <li><a href="@subgroups.url@">@subgroups.pretty_name@</a><br>
-            <small>
-            [<a href="@subgroups.url@one-community-admin">Admin</a>
-            | <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
-            | <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>]
-            </small>
+        <li>
+          <a href="@subgroups.url@">@subgroups.pretty_name@</a>
+          <small>
+            [
+              <a href="@subgroups.url@one-community-admin">Admin</a>
+              |
+              <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
+              |
+              <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
+            ]
+          </small>
+        </li>
       </multiple>
+      <br>
       <li><a href="subcommunity-new">New @sub_pretty_name@</a></ul>
   </li>
+  <br>
   
-  <if @dotlrn_admin_p@ eq 1 and @subcommunity_p@ eq 0>
-    <li><a href="clone">&quot;Clone&quot; this community</a>
-  </if>
   <li><a href="applets">Manage Applets</a></li>
 
 </ul>
-
