@@ -6,10 +6,8 @@
   <msg key="All_members">所有会员</msg>
   <msg key="Archive">存档</msg>
   <msg key="Archive_this_group">存档此组</msg>
-  <msg key="change_name_etc">更改名称、描述等。</msg>
   <msg key="Closed">关闭的</msg>
   <msg key="Copy_this_group">拷贝此组</msg>
-  <msg key="edit_gr_props">编辑组属性</msg>
   <msg key="Email_Members">给会员发Email</msg>
   <msg key="lt_AddRemove_pretty_name">增加或删除%pretty_name%会员</msg>
   <msg key="lt_can_send_bulk_mail_to">能给该团体群发邮件</msg>
@@ -18,7 +16,6 @@
   <msg key="lt_Create_a_new_Limited_">创建新有权限访问用户</msg>
   <msg key="lt_Create_a_new_Limited__1">创建新有权限访问过客</msg>
   <msg key="lt_Customize_Portal_Layo">用户化入口设计</msg>
-  <msg key="lt_Guests_Can_View_Membership_Info">过客用户可以浏览组会员信息吗？</msg>
   <msg key="lt_No_subcomm_pretty_plu">没有%subcomm_pretty_plural%</msg>
   <msg key="lt_Only_use_this_to_crea">为没有帐户的交叉注册学生创建帐户。</msg>
   <msg key="lt_Only_use_this_to_crea_1">为没有帐户无关联的学生创建帐户。此用户不能和该团体的其他会员交流信息。</msg>
