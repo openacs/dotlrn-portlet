@@ -1,10 +1,10 @@
 <if @config.shaded_p@ ne "t">
 
-  @pretty_name@ - <i>@description@</i>
+  @staff_data@
 
   <P>
 
-  @subcomm_data@
+  @student_list_link@
 
 </if>
 <else>

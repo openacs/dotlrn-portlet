@@ -14,11 +14,12 @@ set community_id $config(community_id)
 set pretty_name [dotlrn_community::get_community_name $community_id]
 set description [dotlrn_community::get_community_description $community_id]
 
-if {[dotlrn::user_can_read_private_data_p]} {
-    set member_link "<p><a href=\"members\">List of Members</a>"
-} else  {
-    set member_link ""
-}
+# aks move to "members" portlets
+#if {[dotlrn::user_can_read_private_data_p]} {
+#    set member_link "<p><a href=\"members\">List of Members</a>"
+#} else  {
+#    set member_link ""
+#}
 
 set subcomm_list [dotlrn_community::get_subcomm_list -community_id $community_id]
 
