@@ -41,6 +41,7 @@ namespace eval dotlrn_members_portlet {
         
     } {
         return [portal::add_element_or_append_id \
+                -pretty_name [get_pretty_name] \
                 -portal_id $portal_id \
                 -page_id $page_id \
                 -portlet_name [my_name] \

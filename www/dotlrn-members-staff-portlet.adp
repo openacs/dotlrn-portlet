@@ -5,7 +5,10 @@ Professors:
 <ul>
   <if @dotlrn_instructor_rel:rowcount@ gt 0>
   <multiple name="dotlrn_instructor_rel">
-    <li>
+  
+ <%= ad_return_complaint 1 "[array get dotlrn_instructor_rel]" %>
+  
+  <li>
        @dotlrn_instructor_rel.member_link@
        <if @read_private_data_p@ eq 1 or @user_id@ eq @dotlrn_instructor_rel.user_id@>
          (<a href="mailto:@dotlrn_instructor_rel.email@">@dotlrn_instructor_rel.email@</a>)

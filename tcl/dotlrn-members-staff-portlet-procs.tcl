@@ -41,7 +41,9 @@ namespace eval dotlrn_members_staff_portlet {
     } {
         
     } {
-        return [portal::add_element_or_append_id -portal_id $portal_id \
+        return [portal::add_element_or_append_id \
+                -pretty_name [get_pretty_name] \
+                -portal_id $portal_id \
                 -portlet_name [my_name] \
                 -value_id $community_id \
                 -key community_id]

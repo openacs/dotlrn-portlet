@@ -51,7 +51,10 @@ namespace eval dotlrn_portlet {
 	@creation-date Sept 2001
     } {
 	# Tell portal to add this element to the page
-	set element_id [portal::add_element $portal_id [my_name]]
+	set element_id [portal::add_element \
+                -pretty_name [get_pretty_name] \
+                $portal_id \
+                [my_name]]
 	
 	# The default param must be configured
 	set key "community_id"
