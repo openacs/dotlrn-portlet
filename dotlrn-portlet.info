@@ -22,10 +22,15 @@
         <files>
             <file type="package_spec" path="dotlrn-portlet.info"/>
             <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-admin-portlet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-staff-create.sql"/>
+            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-portlet-create.sql"/>
+            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-staff-portlet-create.sql"/>
             <file type="data_model_create" db_type="oracle" path="sql/oracle/dotlrn-portlet-create.sql"/>
             <file type="data_model_drop" db_type="oracle" path="sql/oracle/dotlrn-portlet-drop.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-admin-portlet-create.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-members-portlet-create.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-members-staff-portlet-create.sql"/>
+            <file type="data_model_create" db_type="postgresql" path="sql/postgresql/dotlrn-portlet-create.sql"/>
+            <file type="data_model_drop" db_type="postgresql" path="sql/postgresql/dotlrn-portlet-drop.sql"/>
             <file type="tcl_procs" path="tcl/dotlrn-admin-portlet-procs.tcl"/>
             <file type="tcl_procs" path="tcl/dotlrn-members-portlet-procs.tcl"/>
             <file type="tcl_procs" path="tcl/dotlrn-members-staff-portlet-procs.tcl"/>
