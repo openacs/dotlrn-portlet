@@ -31,32 +31,36 @@
   </else>
   <br>
 </if>
+     <li><a href="members">Manage Membership</a> - Add/Remove @pretty_name@ members</li>
 
-  <li><a href="community-edit">Edit properties</a></li>
-  <br>
-
-  <li><a href="one-community-portal-configure">Customize layout</a></li>
-  <br>
-
-  <li>
-    Membership
-    <ul>
-      <li><a href="members">Manage Membership</a> - Add/Remove @pretty_name@ members</li>
       <li>
         Change Enrollment Policy -
           <if @join_policy@ eq "open">Open</if><else><a href="join-policy-toggle?policy=open">Open</a></else>
         | <if @join_policy@ eq "closed">Closed</if><else><a href="join-policy-toggle?policy=closed">Closed</a></else>
         |&nbsp;<if @join_policy@ eq "needs approval">Needs&nbsp;Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs&nbsp;Approval</a></else>
       </li>
+<p>
+  <li><a href="one-community-portal-configure">Customize Portal Layout</a></li>
       <li>
-        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">Add a Limited Access user to this community</a>
-        - This allows you to register new users and give them access to just this community.
+        Change Bulk Mail Policy -
+          <if @members_can_spam_p@ true>All members</if><else><a href="spam-policy-toggle?policy=all">All members</a></else>
+          | <if @members_can_spam_p@ false>Only admins</if><else><a href="spam-policy-toggle?policy=admins">Only admins</a></else>
+          can send bulk mail to this community.
       </li>
-      <li>
-        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">Add a Limited Access Guest user to this community</a>
-        - This allows you to register new non-MIT users and give them access to just this community.
-        Information about students who are part of this community will not be available to this user.
-      </li>
+  <li><a href="community-edit">Edit Group Properties</a> - Change name, description, etc.</li>
+
+<if @subcommunity_p@ eq 0>
+<p>
+<if @club_p@ eq 0>
+<li>
+        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">Create a new Limited Access user</a> - Only use this to create an account for cross-registered students who do not have accounts from a previous class.
+</if>
+<li>        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">Create a new Limited Access Guest user</a>
+        - Only use this to create accounts for non-affiliated users who do not already have an account.
+        Information about other members of this community will not be available to this user.
+</li>
+</ul>
+</if>
     </ul>
   </li>
   <br>

@@ -36,6 +36,18 @@ set sub_pretty_plural [ad_parameter subcommunities_pretty_plural dotlrn]
 set admin_pretty_name [ad_parameter dotlrn_admin_pretty_name dotlrn]
 set subcommunity_p [dotlrn_community::subcommunity_p -community_id $community_id]
 
+#The community_type is dotlrn_club for "communties" and the subject name for classes.
+set comm_type [dotlrn_community::get_community_type_from_community_id $community_id]
+
+if {$comm_type == "dotlrn_club"} {
+    set club_p 1
+} else {
+    set club_p 0
+}
+
+set members_rel_id [dotlrn_community::get_members_rel_id -community_id $community_id]
+set members_can_spam_p [permission::permission_p -party_id $members_rel_id -object_id $community_id -privilege dotlrn_spam_community]
+
 # get the community info
 db_1row select_community_info {}
 
