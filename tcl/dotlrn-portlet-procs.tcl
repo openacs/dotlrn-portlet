@@ -61,7 +61,6 @@ namespace eval dotlrn_portlet {
 
 	@return element_id The new element's id
     } {
-        ns_log notice "XXX dotlrn_portlet::add_self_to_page portal_id is $portal_id; community_id is $community_id"
 	set element_id [portal::add_element \
             -portal_id $portal_id \
             -portlet_name [get_my_name] \

@@ -54,7 +54,6 @@ namespace eval dotlrn_members_portlet {
         Adds the dotlrn "members" portlet to the given portal.
         Pass along the community_id
     } {
-        ns_log notice "XXX dotlrn_members_portlet::add_self_to_page portal_id is $portal_id; page_name is $page_name; community_id is $community_id"
         set element_id [portal::add_element \
             -pretty_name [get_pretty_name] \
             -portal_id $portal_id \
