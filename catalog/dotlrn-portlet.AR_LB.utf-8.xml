@@ -18,7 +18,7 @@
   <msg key="lt_Customize_Portal_Layo">خصّص تخطيط بوابة انترنت</msg>
   <msg key="lt_No_subcomm_pretty_plu">لا %subcomm_pretty_plural%</msg>
   <msg key="lt_Only_use_this_to_crea">إستعملْ هذا فقط لخَلْقْ حساب للطلابِ عبرِ المسجّلينِ الذين ما عِنْدَهُمْ حساباتُ مِنْ صنفِ سابق.</msg>
-  <msg key="lt_Only_use_this_to_crea_1">هذا الإستعمال الوحيد لخلق الحسابات للمستعملين غير المنتسبين الذين لا لديهم حساب. معلومات حول الأعضاء الآخرين هذه الجالية لن تكون متوفرة إلى هذا المستعمل.</msg>
+  <msg key="lt_Only_use_this_to_crea_1">إستعملْ هذا فقط لخَلْقْ حسابات لي المستخدمون الغير منتسبون الذين عِنْدَهُمْ حساب حالي. معلومات عن العضاء الآخرين في المجموعة لن تكون متوفرة لهذا المستخدم.</msg>
   <msg key="lt_Sorry_this_functional">آسف، هذه الفاعليّة لَيستْ متوفرة إلى الضيوف</msg>
   <msg key="lt_This_group_is_archive">هذه المجموعة مؤرشفة</msg>
   <msg key="Manage_Applets">أدرْ البرامج المحدودة</msg>
