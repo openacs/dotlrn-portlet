@@ -49,11 +49,11 @@
         |&nbsp;<if @join_policy@ eq "needs approval">Needs&nbsp;Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs&nbsp;Approval</a></else>
       </li>
       <li>
-        <a href="user-add?type=student&access_level=limited&read_private_data_p=t">Add a Limited Access user to this community</a>
+        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">Add a Limited Access user to this community</a>
         - This allows you to register new users and give them access to just this community.
       </li>
       <li>
-        <a href="user-add?type=student&access_level=limited&read_private_data_p=f">Add a Limited Access Guest user to this community</a>
+        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">Add a Limited Access Guest user to this community</a>
         - This allows you to register new non-MIT users and give them access to just this community.
         Information about students who are part of this community will not be available to this user.
       </li>
