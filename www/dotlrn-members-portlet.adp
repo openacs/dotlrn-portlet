@@ -21,44 +21,52 @@
 
 <if @config.shaded_p@ ne "t">
 <if @read_private_data_p@ eq 1>
+
 <table class="table-display" cellpadding=3 cellspacing=0>
-<tr class="table-header"><td align=right colspan=3>
-<a href="members"><if @admin_p@ ne 1>#dotlrn-portlet.Sort#</if><else>#dotlrn-portlet.Sortmanage#</else>
-</if>
-</a>
-</td></tr>
-<multiple name="users">
-<group column="role">
-<if @users.rownum@ odd>
-<tr class="odd">
-</if>
-<else>
-<tr class="even">
-</else>
+  <tr class="table-header">
+    <td align=right colspan=3>
+      <a href="members"><if @admin_p@ ne 1>#dotlrn-portlet.Sort#</if><else>#dotlrn-portlet.Sortmanage#</else></a>
+    </td>
+  </tr>
 
-<td>
+  <multiple name="users">
+  <group column="role">
+  <if @users.rownum@ odd>
+  <tr class="odd">
+  </if>
+  <else>
+  <tr class="even">
+  </else>
+
+    <td>
       <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-</td><td>    
+    </td>
+    <td>    
       <a href="mailto:@users.email@">@users.email@</a>
-</td><td>
+    </td>
+    <td>
 	<i>@users.role@</i>
-</td></tr>
+    </td>
+  </tr>
   </group>
-
-
-</multiple>
+  </multiple>
 </table>
+
 <if @spam_p@ true>
+<p>
 <ul>
-<li>        <a href="spam?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a>
+  <li><a href="spam?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a></li>
 </ul>
+</p>
 </if>
 
 </if>
 <else>
+        <% # The user is not allowed to read the member list - he/she is maybe a guest %>
 	#dotlrn-portlet.lt_Sorry_this_functional#
 </else>
 </if>
 <else>
-<br>
+   <% # The portal is shaded - should not be displayed %>
+   <br>
 </else>

@@ -34,7 +34,7 @@
     </multiple>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %></small>
+    <li><small>#dotlrn-portlet.no_instructor_members#</small>
   </else>
   </ul>
 
@@ -54,7 +54,7 @@
     </multiple>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %></small>
+    <li><small>#dotlrn-portlet.no_teaching_assistant_members#</small>
   </else>
   </ul>
 
@@ -74,7 +74,7 @@
     </multiple>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
+    <li><small>#dotlrn-portlet.no_course_assistant_members#</small>
   </else>
   </ul>
 

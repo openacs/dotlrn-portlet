@@ -56,3 +56,11 @@ foreach one_user_set $all_users_list {
 template::util::list_of_ns_sets_to_multirow \
     -rows $all_users_list \
     -var_name "users"
+
+# Used in en_US version of some messages in adp
+set instructor_role_pretty_plural [dotlrn_community::get_role_pretty_plural -community_id $community_id \
+                                                                            -rel_type dotlrn_instructor_rel]
+set teaching_assistant_role_pretty_plural [dotlrn_community::get_role_pretty_plural -community_id $community_id \
+                                                                                     -rel_type dotlrn_ta_rel]
+set course_assistant_role_pretty_plural [dotlrn_community::get_role_pretty_plural -community_id $community_id \
+                                                                                  -rel_type dotlrn_ca_rel]
