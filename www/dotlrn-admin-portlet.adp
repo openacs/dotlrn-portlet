@@ -18,8 +18,6 @@
 
 %>
 
-<ul>
-
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
   <li><a href="dotlrn-group-admin-faq">Administrator FAQ</a></li>
@@ -56,10 +54,9 @@
 
 <if @subcommunity_p@ eq 0>
 <p>
-<if @club_p@ eq 0>
 <li>
         <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">#dotlrn-portlet.lt_Create_a_new_Limited_#</a> - #dotlrn-portlet.lt_Only_use_this_to_crea#
-</if>
+
 <li>        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">#dotlrn-portlet.lt_Create_a_new_Limited__1#</a>
         - #dotlrn-portlet.lt_Only_use_this_to_crea_1#
 </li>
