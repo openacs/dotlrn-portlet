@@ -9,9 +9,7 @@
 </if>
     , <i>@users.rel_type@</i>
 <if @admin_p@ eq 1 or @user_id@ eq @users.user_id@>
-    &nbsp; (FIXME deregister link) </li>
-
-    <!-- include src="deregister-link" url="deregister?user_id=@users.user_id@&referer=@referer@" label="Drop Membership" -->
+    &nbsp; <small>[<a href="deregister?user_id=@users.user_id@&amp;referer=members">deregister</a>]</small>
 </if>
 </multiple>
 <if @admin_p@ eq 1>
