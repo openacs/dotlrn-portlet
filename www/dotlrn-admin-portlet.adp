@@ -57,7 +57,8 @@
         <li><a href="@subgroups.url@">@subgroups.pretty_name@</a><br>
             <small>
             [<a href="@subgroups.url@one-community-admin">Admin</a>
-            | <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>]
+            | <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
+            | <a href="subcommunity-delete?community_id=@subgroups.community_id@">Delete</a>]
             </small>
       </multiple>
       <li><a href="subcommunity-new">New @sub_pretty_name@</a></ul>
