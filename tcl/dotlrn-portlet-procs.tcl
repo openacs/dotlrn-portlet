@@ -24,6 +24,13 @@ namespace eval dotlrn_portlet {
 	return "Class Information"
     }
 
+
+    ad_proc -public link {
+    } {
+	return ""
+    }
+
+
     ad_proc -public add_self_to_page { 
 	page_id 
 	community_id
