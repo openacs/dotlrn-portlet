@@ -21,7 +21,7 @@ namespace eval dotlrn_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Class Information"
+	return "Group Information"
     }
 
 
@@ -79,12 +79,12 @@ namespace eval dotlrn_portlet {
 	    if { [db_0or1row select_comminity_info $query] } {
 		set data "$pretty_name - <i>$description</i>"
 	    } else {
-		set data "Community info not found. Contact webmaster, please!"
+		set data "Group info not found. Contact webmaster, please!"
 	    }
 	    
 	    # BIG BAD THING (fixme: ben)
 	    if {[dotlrn::user_can_read_private_data_p]} {
-		append data "<p><a href=student-list>List of Students</a>"
+		append data "<p><a href=student-list>List of Members</a>"
 	    }
 	} else {
 	    set data ""
