@@ -36,87 +36,95 @@ declare
   ds_id portal_datasources.datasource_id%TYPE;
 begin
 
-  begin 
+--  begin 
     select datasource_id into ds_id
       from portal_datasources
      where name = ''dotlrn-portlet'';
-   exception when no_data_found then
-     ds_id := null;
-  end;
+--   exception when no_data_found then
+--     ds_id := null;
+--  end;
 
   if ds_id is not null then
-    portal_datasource.delete(ds_id);
+    portal_datasource__delete(ds_id);
   end if;
 
-end;
-/
-show errors;
+  return 0;
 
+end;' language 'plpgsql';
+
+select inline_0();
+drop function inline_0();
+
+
+create function inline_1() 
+returns integer as '
 declare
 	foo integer;
 begin
 
 	-- add all the hooks
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''GetMyName''
 	);
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''GetPrettyName''
 	);
 
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''Link''
 	);
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''AddSelfToPage''
 	);
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''Show''
 	);
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''Edit''
 	);
 
-	foo := acs_sc_impl.delete_alias (
+	foo := acs_sc_impl_alias__delete (
 	       ''portal_datasource'',
 	       ''dotlrn_portlet'',
 	       ''RemoveSelfFromPage''
 	);
 
 	-- Drop the binding
-	perform acs_sc_binding.delete (
+	perform acs_sc_binding__delete (
 	   ''portal_datasource'',
 	   ''dotlrn_portlet''
 	);
 
 	-- drop the impl
-	foo := acs_sc_impl.delete (
+	foo := acs_sc_impl__delete (
 		''portal_datasource'',
 		''dotlrn_portlet''
 	);
 
 	return 0;
 
+  return 0;
+
 end;' language 'plpgsql';
 
-select inline_0();
-drop function inline_0();
+select inline_1();
+drop function inline_1();
 
 
