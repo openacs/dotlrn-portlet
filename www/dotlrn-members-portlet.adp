@@ -24,7 +24,7 @@
 
 <table class="table-display" cellpadding=3 cellspacing=0>
   <tr class="table-header">
-    <td align=right colspan=3>
+    <td align=right colspan=4>
       <a href="members"><if @admin_p@ ne 1>#dotlrn-portlet.Sort#</if><else>#dotlrn-portlet.Sortmanage#</else></a>
     </td>
   </tr>
@@ -38,6 +38,11 @@
   <tr class="even">
   </else>
 
+    <td>
+      <if @users.portrait_p@ true or @users.bio_p@ true>
+        <a href="@users.community_member_url@"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" border="0"></a>
+      </if>
+    </td>
     <td>
       <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
     </td>
