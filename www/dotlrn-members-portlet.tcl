@@ -38,3 +38,8 @@ set spam_p [dotlrn::user_can_spam_community_p -user_id [ad_get_user_id] -communi
 template::util::list_of_ns_sets_to_multirow \
     -rows [dotlrn_community::list_users $community_id] \
     -var_name "users"
+
+template::multirow foreach users { 
+    set role [dotlrn_community::get_role_pretty_name -community_id $community_id -rel_type $rel_type]
+}
+
