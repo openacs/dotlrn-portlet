@@ -32,7 +32,7 @@
         <li>     
           <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
           <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-            (<a href="mailto:@users.email@">@users.email@</a>)
+            (<%= [email_image::get_user_email -user_id $users(user_id)] %>)
           </if>
         </if>
     </multiple>
@@ -52,7 +52,7 @@
         <li>     
           <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
           <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-              (<a href="mailto:@users.email@">@users.email@</a>)
+            (<%= [email_image::get_user_email -user_id $users(user_id)] %>)
           </if>
         </li>
       </if>
@@ -70,7 +70,7 @@
           <li>     
             <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
             <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-              (<a href="mailto:@users.email@">@users.email@</a>)
+            (<%= [email_image::get_user_email -user_id $users(user_id)] %>)
             </if>
           </li>
         </if>
