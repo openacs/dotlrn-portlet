@@ -43,7 +43,9 @@
             <file type="content_page" path="www/dotlrn-portlet.tcl"/>
         </files>
         <parameters>
-        <!-- No version parameters -->
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_admin_portlet_force_region"  default="1" description="the portal region to put the dotlrn admin portlet in"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_portlet_force_region"  default="2" description="the portal region to put the dotlrn portlet on"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_members_staff_portlet_force_region"  default="2" description="the portal region to put the dotlrn members staff portlet"/>
         </parameters>
 
     </version>

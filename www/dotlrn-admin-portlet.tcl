@@ -34,6 +34,7 @@ set dotlrn_admin_p [dotlrn::admin_p]
 set dotlrn_admin_url "[dotlrn::get_url]/admin"
 set sub_pretty_name [ad_parameter subcommunities_pretty_name dotlrn]
 set sub_pretty_plural [ad_parameter subcommunities_pretty_plural dotlrn]
+set admin_pretty_name [ad_parameter dotlrn_admin_pretty_name dotlrn]
 
 # get the community info 
 db_1row select_community_info {}

@@ -125,8 +125,8 @@ begin
 	foo := acs_sc_impl.new_alias (
 	       'portal_datasource',
 	       'dotlrn_admin_portlet',
-	       'MyName',
-	       'dotlrn_admin_portlet::my_name',
+	       'GetMyName',
+	       'dotlrn_admin_portlet::get_my_name',
 	       'TCL'
 	);
 
@@ -175,22 +175,6 @@ begin
 	       'dotlrn_admin_portlet',
 	       'RemoveSelfFromPage',
 	       'dotlrn_admin_portlet::remove_self_from_page',
-	       'TCL'
-	);
-
-	foo := acs_sc_impl.new_alias (
-	       'portal_datasource',
-	       'dotlrn_admin_portlet',
-	       'MakeSelfAvailable',
-	       'dotlrn_admin_portlet::make_self_available',
-	       'TCL'
-	);
-
-	foo := acs_sc_impl.new_alias (
-	       'portal_datasource',
-	       'dotlrn_admin_portlet',
-	       'MakeSelfUnavailable',
-	       'dotlrn_admin_portlet::make_self_unavailable',
 	       'TCL'
 	);
 

@@ -16,10 +16,7 @@
 
 ad_library {
 
-    Procedures to supports the dotlrn "members"  portlet
-
-    Copyright Openforce, Inc.
-    Licensed under GNU GPL v2 
+    Procedures to support the dotlrn "members" portlet
     
     @author arjun@openforce.net 
     @cvs-id $Id$
@@ -28,7 +25,7 @@ ad_library {
 
 namespace eval dotlrn_members_portlet {
 
-    ad_proc -private my_name {
+    ad_proc -private get_my_name {
     } {
         return "dotlrn_members_portlet"
     }
@@ -54,23 +51,23 @@ namespace eval dotlrn_members_portlet {
 	portal_id 
 	community_id
     } {
-        
+        Adds the dotlrn "members" portlet to the given portal. 
+        Pass along the community_id
     } {
-        return [portal::add_element_or_append_id \
-                -pretty_name [get_pretty_name] \
-                -portal_id $portal_id \
-                -page_id $page_id \
-                -portlet_name [my_name] \
-                -value_id $community_id \
-                -key community_id ]
+        set element_id [portal::add_element \
+                    -pretty_name [get_pretty_name] \
+                    -portal_id $portal_id \
+                    -page_id $page_id \
+                    -portlet_name [get_my_name] 
+        ]
+
+        portal::set_element_param $element_id "community_id" $community_id
+        return $element_id
     }
 
     ad_proc -public show { 
 	 cf 
     } {
-	 Call the template to display
-    
-	 @param cf A config array
     } {
         portal::show_proc_helper \
                 -package_key [my_package_key] \
@@ -80,45 +77,13 @@ namespace eval dotlrn_members_portlet {
 
     ad_proc -public remove_self_from_page { 
         portal_id 
-        community_id 
     } {
-	Removes the PE from the given page 
+	Removes the dotlrn "memebers"  PE from the given portal
     } {
-	# get the element IDs (could be more than one!)
-	set element_ids [portal::get_element_ids_by_ds $portal_id [my_name]]
-
-	# remove all elements
-	db_transaction {
-	    foreach element_id $element_ids {
-		portal::remove_element $element_id
-	    }
-	}
-    }
-
-    ad_proc -public edit { 
-	nothing here, move along
-    } {
-	return ""
-    }
-
-    ad_proc -public make_self_available { 
- 	portal_id 
-    } {
- 	wrapper
-    } {
- 	portal::make_datasource_available \
- 		$portal_id [portal::get_datasource_id [my_name]]
-    }
-
-    ad_proc -public make_self_unavailable { 
-	portal_id 
-    } {
-        wrapper
-    } {
-	portal::make_datasource_unavailable \
-		$portal_id [portal::get_datasource_id [my_name]]
+        portal::remove_element \
+                -portal_id $portal_id \
+                -portlet_name [get_my_name]
     }
 }
-
  
 

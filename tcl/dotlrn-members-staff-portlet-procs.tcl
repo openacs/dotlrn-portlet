@@ -16,19 +16,15 @@
 
 ad_library {
 
-    Procedures to supports the dotlrn "members staff"  portlet
+    Procedures to supports the dotlrn "members staff" portlet aka "Staff List"
 
-    Copyright Openforce, Inc.
-    Licensed under GNU GPL v2 
-    
     @author arjun@openforce.net 
     @cvs-id $Id$
-
 }
 
 namespace eval dotlrn_members_staff_portlet {
 
-    ad_proc -private my_name {
+    ad_proc -private get_my_name {
     } {
         return "dotlrn_members_staff_portlet"
     }
@@ -38,32 +34,48 @@ namespace eval dotlrn_members_staff_portlet {
         return "dotlrn-portlet"
     }
 
-
     ad_proc -public get_pretty_name {
     } {
 	return "Staff List"
     }
-
 
     ad_proc -public link {
     } {
 	return ""
     }
 
-
     ad_proc -public add_self_to_page { 
 	portal_id 
 	community_id
     } {
-        
+        Add the "dotlrn members staff" portlet to the page
     } {
-        return [portal::add_element_or_append_id \
-                -pretty_name [get_pretty_name] \
+        set force_region [ad_parameter \
+                "dotlrn_members_staff_portlet_force_region" \
+                [my_package_key]
+        ]
+
+        set element_id [portal::add_element \
                 -portal_id $portal_id \
-                -portlet_name [my_name] \
-                -force_region 2 \
-                -value_id $community_id \
-                -key community_id]
+                -pretty_name [get_pretty_name] \
+                -portlet_name [get_my_name] \
+                -force_region $force_region
+        ]
+
+        portal::set_element_param $element_id "community_id" $community_id 
+
+        return $element_id        
+    }
+
+    ad_proc -public remove_self_from_page { 
+        portal_id 
+        community_id 
+    } {
+	Removes the PE from the given page 
+    } {
+        portal::remove_element \
+                -portal_id $portal_id \
+                -portlet_name [get_my_name]
     }
 
     ad_proc -public show { 
@@ -79,46 +91,7 @@ namespace eval dotlrn_members_staff_portlet {
                 -template_src "dotlrn-members-staff-portlet"
     }
 
-    ad_proc -public remove_self_from_page { 
-        portal_id 
-        community_id 
-    } {
-	Removes the PE from the given page 
-    } {
-	# get the element IDs (could be more than one!)
-	set element_ids [portal::get_element_ids_by_ds $portal_id [my_name]]
 
-	# remove all elements
-	db_transaction {
-	    foreach element_id $element_ids {
-		portal::remove_element $element_id
-	    }
-	}
-    }
-
-    ad_proc -public edit { 
-	nothing here, move along
-    } {
-	return ""
-    }
-
-    ad_proc -public make_self_available { 
- 	portal_id 
-    } {
- 	wrapper
-    } {
- 	portal::make_datasource_available \
- 		$portal_id [portal::get_datasource_id [my_name]]
-    }
-
-    ad_proc -public make_self_unavailable { 
-	portal_id 
-    } {
-        wrapper
-    } {
-	portal::make_datasource_unavailable \
-		$portal_id [portal::get_datasource_id [my_name]]
-    }
 }
 
  

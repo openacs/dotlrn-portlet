@@ -1,4 +1,3 @@
-#
 #  Copyright (C) 2001, 2002 OpenForce, Inc.
 #
 #  This file is part of dotLRN.
