@@ -39,7 +39,7 @@
         Change Enrollment Policy -
           <if @join_policy@ eq "open">Open</if><else><a href="join-policy-toggle?policy=open">Open</a></else>
         | <if @join_policy@ eq "closed">Closed</if><else><a href="join-policy-toggle?policy=closed">Closed</a></else>
-        | <if @join_policy@ eq "needs approval">Needs Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs Approval</a></else>
+        |&nbsp;<if @join_policy@ eq "needs approval">Needs&nbsp;Approval</if><else><a href="join-policy-toggle?policy=needs%20approval">Needs&nbsp;Approval</a></else>
       </li>
       <li>
         <a href="user-add?type=student&access_level=limited&read_private_data_p=t">Add a Limited Access user to this community</a>
