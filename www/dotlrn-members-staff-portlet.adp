@@ -20,17 +20,21 @@
 
 <!-- aks: shading is broken for this portlet -->
 
-<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
-  <ul>
-  <if @n_profs@ gt 0>
-    <multiple name="users">
-      <if @users.rel_type@ eq "dotlrn_instructor_rel">
-      <li>     
-        <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-        <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-          (<a href="mailto:@users.email@">@users.email@</a>)
+<if @community_id@ eq 0>
+  <small>No community was specified</small>
+</if>
+<else>
+  <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
+    <ul>
+    <if @n_profs@ gt 0>
+      <multiple name="users">
+        <if @users.rel_type@ eq "dotlrn_instructor_rel">
+        <li>     
+          <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
+          <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
+            (<a href="mailto:@users.email@">@users.email@</a>)
+          </if>
         </if>
-      </if>
     </multiple>
   </if>
   <else>
@@ -48,9 +52,9 @@
       <li>     
         <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
         <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-          (<a href="mailto:@users.email@">@users.email@</a>)
+            (<a href="mailto:@users.email@">@users.email@</a>)
+          </if>
         </if>
-      </if>
     </multiple>
   </if>
   <else>
@@ -69,17 +73,22 @@
         <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
         <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
           (<a href="mailto:@users.email@">@users.email@</a>)
+          </if>
         </if>
-      </if>
-    </multiple>
+      </multiple>
+    </if>
+    <else>
+      <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
+    </else>
+    </ul>
+
+  <if @read_private_data_p@>
+    <br>
+    <a href="members">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
     <li><small>#dotlrn-portlet.no_course_assistant_members#</small>
   </else>
   </ul>
-
-<if @read_private_data_p@>
-<br>
-<a href="members">#dotlrn-portlet.Member_List#</a>
-</if>
+</else>
 

@@ -19,33 +19,6 @@
         <requires url="dotlrn" version="1.0"/>
         <requires url="new-portal" version="0.1a"/>
 
-        <files>
-            <file type="package_spec" path="dotlrn-portlet.info"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-admin-portlet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-portlet-create.sql"/>
-            <file type="data_model" db_type="oracle" path="sql/oracle/dotlrn-members-staff-portlet-create.sql"/>
-            <file type="data_model_create" db_type="oracle" path="sql/oracle/dotlrn-portlet-create.sql"/>
-            <file type="data_model_drop" db_type="oracle" path="sql/oracle/dotlrn-portlet-drop.sql"/>
-            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-admin-portlet-create.sql"/>
-            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-members-portlet-create.sql"/>
-            <file type="data_model" db_type="postgresql" path="sql/postgresql/dotlrn-members-staff-portlet-create.sql"/>
-            <file type="data_model_create" db_type="postgresql" path="sql/postgresql/dotlrn-portlet-create.sql"/>
-            <file type="data_model_drop" db_type="postgresql" path="sql/postgresql/dotlrn-portlet-drop.sql"/>
-            <file type="tcl_procs" path="tcl/dotlrn-admin-portlet-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/dotlrn-members-portlet-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/dotlrn-members-staff-portlet-procs.tcl"/>
-            <file type="tcl_procs" path="tcl/dotlrn-portlet-procs.tcl"/>
-            <file type="query_file" db_type="oracle" path="www/dotlrn-admin-portlet-oracle.xql"/>
-            <file type="content_page" path="www/dotlrn-admin-portlet.adp"/>
-            <file type="content_page" path="www/dotlrn-admin-portlet.tcl"/>
-            <file type="query_file" path="www/dotlrn-admin-portlet.xql"/>
-            <file type="content_page" path="www/dotlrn-members-portlet.adp"/>
-            <file type="content_page" path="www/dotlrn-members-portlet.tcl"/>
-            <file type="content_page" path="www/dotlrn-members-staff-portlet.adp"/>
-            <file type="content_page" path="www/dotlrn-members-staff-portlet.tcl"/>
-            <file type="content_page" path="www/dotlrn-portlet.adp"/>
-            <file type="content_page" path="www/dotlrn-portlet.tcl"/>
-        </files>
         <parameters>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_admin_portlet_force_region"  default="1" description="the portal region to put the dotlrn admin portlet in"/>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_portlet_force_region"  default="2" description="the portal region to put the dotlrn portlet on"/>
