@@ -25,7 +25,7 @@ namespace eval dotlrn_members_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Community Members"
+        return "Members"
     }
 
     ad_proc -public link {

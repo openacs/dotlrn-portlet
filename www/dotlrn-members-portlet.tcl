@@ -1,19 +1,36 @@
-ad_page_contract {
-    The display logic for the dotrn members portlet
+# copied from dotlrn/www/members-chunk.tcl
 
-    @author Arjun Sanyal (arjun@openforce.net)
-    @cvs_id $Id$
+ad_page_contract {
+    @author yon (yon@milliped.com)
+    @creation-date Jan 08, 2002
+    @version $Id$
+} -query {
 } -properties {
-    
+    users:multirow
 }
 
 array set config $cf	
-set community_id $config(community_id)
 
-if {[dotlrn::user_can_read_private_data_p]} {
-    set member_data "FIXME: here's where the list of members will go<p>role, first name, last name, email <P>
-<a href=\"members\">List of Members</a>"
-} else  {
-    set member_data ""
+set user_id [ad_conn user_id]
+set  referer [ad_conn url]
+set community_id [dotlrn_community::get_community_id]
+
+set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id $community_id]
+set read_private_data_p [dotlrn::user_can_read_private_data_p $user_id]
+
+# Get all users for this community, including role
+set list_of_users [dotlrn_community::list_users $community_id]
+
+template::multirow create users rel_id rel_type user_id first_names last_name email
+
+foreach user $list_of_users {
+    template::multirow append users \
+        [lindex $user 0] \
+        [dotlrn_community::get_role_pretty_name_from_rel_type -rel_type [lindex $user 1]] \
+        [lindex $user 2] \
+        [lindex $user 3] \
+        [lindex $user 4] \
+        [lindex $user 5]
 }
 
+ad_return_template
