@@ -32,20 +32,20 @@ namespace eval dotlrn_portlet {
 
 
     ad_proc -public add_self_to_page { 
-	page_id 
+	portal_id 
 	community_id
     } {
 	Adds a dotlrn PE to the given page with the community_id as
 	opaque data in the portal configuration.
     
 	@return element_id The new element's id
-	@param page_id The page to add self to
+	@param portal_id The page to add self to
 	@param community_id The dotlrn community to show info about
 	@author arjun@openforce.net
 	@creation-date Sept 2001
     } {
 	# Tell portal to add this element to the page
-	set element_id [portal::add_element_to_region $page_id [my_name] 2]
+	set element_id [portal::add_element_to_region $portal_id [my_name] 2]
 	
 	# The default param must be configured
 	set key "community_id"
@@ -100,7 +100,7 @@ namespace eval dotlrn_portlet {
     } {
 	Removes a dotlrn PE from the given page 
     
-	@param page_id The page to remove self from
+	@param portal_id The page to remove self from
 	@param community_id
 	@author arjun@openforce.net
 	@creation-date Sept 2001
@@ -123,29 +123,29 @@ namespace eval dotlrn_portlet {
     }
 
     ad_proc -public make_self_available { 
- 	page_id 
+ 	portal_id 
     } {
  	Wrapper for the portal:: proc
  	
- 	@param page_id
+ 	@param portal_id
  	@author arjun@openforce.net
  	@creation-date Nov 2001
     } {
  	portal::make_datasource_available \
- 		$page_id [portal::get_datasource_id [my_name]]
+ 		$portal_id [portal::get_datasource_id [my_name]]
     }
 
     ad_proc -public make_self_unavailable { 
-	page_id 
+	portal_id 
     } {
 	Wrapper for the portal:: proc
 	
-	@param page_id
+	@param portal_id
 	@author arjun@openforce.net
 	@creation-date Nov 2001
     } {
 	portal::make_datasource_unavailable \
-		$page_id [portal::get_datasource_id [my_name]]
+		$portal_id [portal::get_datasource_id [my_name]]
     }
 }
 
