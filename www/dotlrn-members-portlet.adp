@@ -23,7 +23,7 @@
 <ul>
 
 <multiple name="users">
-
+<group column="role">
   <li>
     <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
     
@@ -40,7 +40,9 @@
         <small>[<a href="deregister?">deregister</a>]</small>
       </if>
     </else>
-
+    </li>
+</group>
+<br>
 </multiple>
 
 </ul>
