@@ -28,7 +28,7 @@
   
       <ul>
 
-        @subcomm_data@
+        @subcomm_data;noquote@
   
       </ul>
 
