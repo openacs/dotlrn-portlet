@@ -73,17 +73,8 @@ namespace eval dotlrn_portlet {
 	return $element_id
     }
 
-    ad_proc -public show {
-	 cf
-    } {
-    } {
-        portal::show_proc_helper \
-            -package_key [my_package_key] \
-            -config_list $cf
-    }
-
     ad_proc -public remove_self_from_page {
-	  portal_id
+        {-portal_id:required}
     } {
 	Removes the dotlrn PE from the portal.
     } {
@@ -91,6 +82,15 @@ namespace eval dotlrn_portlet {
         portal::remove_element \
             -portal_id $portal_id \
             -portlet_name [get_my_name]
+    }
+
+    ad_proc -public show {
+	 cf
+    } {
+    } {
+        portal::show_proc_helper \
+            -package_key [my_package_key] \
+            -config_list $cf
     }
 
 }

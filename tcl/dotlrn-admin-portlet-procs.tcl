@@ -72,7 +72,7 @@ namespace eval dotlrn_admin_portlet {
     }
 
     ad_proc -public remove_self_from_page {
-        portal_id
+        {-portal_id:required}
     } {
 	Removes a dotlrn PE from the given portal
     } {

@@ -66,6 +66,16 @@ namespace eval dotlrn_members_portlet {
         return $element_id
     }
 
+    ad_proc -public remove_self_from_page {
+        {-portal_id:required}
+    } {
+	Removes the dotlrn "memebers"  PE from the given portal
+    } {
+        portal::remove_element \
+            -portal_id $portal_id \
+            -portlet_name [get_my_name]
+    }
+
     ad_proc -public show {
 	 cf
     } {
@@ -74,16 +84,6 @@ namespace eval dotlrn_members_portlet {
             -package_key [my_package_key] \
             -config_list $cf \
             -template_src "dotlrn-members-portlet"
-    }
-
-    ad_proc -public remove_self_from_page {
-        portal_id
-    } {
-	Removes the dotlrn "memebers"  PE from the given portal
-    } {
-        portal::remove_element \
-            -portal_id $portal_id \
-            -portlet_name [get_my_name]
     }
 
 }

@@ -68,8 +68,7 @@ namespace eval dotlrn_members_staff_portlet {
     }
 
     ad_proc -public remove_self_from_page {
-        portal_id
-        community_id
+        {-portal_id:required}
     } {
 	Removes the PE from the given page
     } {
