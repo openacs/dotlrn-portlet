@@ -98,4 +98,92 @@ namespace eval dotlrn_portlet {
             -config_list $cf
     }
 
+    ad_proc -public is_allowed {
+	{-parameter:required}
+    } {
+        This is the TCL proc that is called by some Group Administration pages
+        that need to verify a dotlrn-portlet parameter.
+        This prevents bad users to access protected pages.
+
+ 
+        @author Hector Amado (hr_amado@galileo.edu)
+        @creation-date 2004-06-22
+
+    } {
+
+        switch $parameter {
+            "cenrollment" {
+		if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowChangeEnrollmentPolicy] } {
+		    if { ![dotlrn::admin_p] } {  
+                ns_log notice "user has tried to see    without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+		    }
+                }
+	    }
+            "managemembership" {
+                if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowManageMembership] } {
+     	      if { ![dotlrn::admin_p] } {
+                ns_log notice "user has tried to see /dotlrn/www/members  without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+              }
+             }
+	    }
+            "cplayout" {
+                if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCustomizePortalLayout] } {
+                	 if { ![dotlrn::admin_p] } {
+                ns_log notice "user has tried to see /dotlrn/www/one-community-portal-configure  without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+	       }
+             }
+	    }
+            "guestuser" { 
+                if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCreateGuestUsersInCommunity] } {
+                	 if { ![dotlrn::admin_p] } {
+                ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+	       }
+             }
+	    }
+            "limiteduser" {
+                if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCreateLimitedUsersInCommunity] } {
+     	                 if { ![dotlrn::admin_p] } {
+                ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+	       }
+             }
+           }
+	    "manageapplets" {
+              if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowManageApplets] } {
+     	                 if { ![dotlrn::admin_p] } {
+                ns_log notice "user has tried to see /dotlrn/www/applets  without permission"
+                ad_return_forbidden \
+                   "Permission Denied"\
+                   "<blockquote>
+                     You don't have permission to see this page.
+                    </blockquote>"
+	       }
+             }
+          }
+	}
+    }
 }

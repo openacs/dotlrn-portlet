@@ -16,7 +16,17 @@
         <requires url="dotlrn" version="1.0"/>
         <requires url="new-portal" version="0.1a"/>
 
+        <callbacks>
+            <callback type="before-uninstall"  proc="dotlrn_portlet::apm::before_uninstall"/>
+        </callbacks>
         <parameters>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowChangeEnrollmentPolicy"  default="1" description="Does the community admin can change Enrollment Policy?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowCreateGuestUsersInCommunity"  default="1" description="Does the community admin can create Limited Guests?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowCreateLimitedUsersInCommunity"  default="1" description="Does the community admin can create Limited Users?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowCustomizePortalLayout"  default="1" description="Does the community admin can Customize Portal Layout?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowManageApplets"  default="1" description="Does the community admin can manage applets?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowManageMembership"  default="1" description="Does the community admin can Manage Membership?" section_name="Group Administration"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="AllowMembersDropGroups"  default="1" description="Does user can drop a Group?" section_name="Group Administration"/>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_admin_portlet_force_region"  default="1" description="the portal region to put the dotlrn admin portlet in"/>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_portlet_force_region"  default="2" description="the portal region to put the dotlrn portlet on"/>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="dotlrn_members_staff_portlet_force_region"  default="2" description="the portal region to put the dotlrn members staff portlet"/>

@@ -39,6 +39,31 @@ set subcommunity_p [dotlrn_community::subcommunity_p -community_id $community_id
 #The community_type is dotlrn_club for "communties" and the subject name for classes.
 set comm_type [dotlrn_community::get_community_type_from_community_id $community_id]
 
+#Checking group admin parameters
+set manage_membership_p [parameter::get_from_package_key \
+                                    -package_key dotlrn-portlet \
+			            -parameter AllowManageMembership]
+
+set enrollment_policy_p [parameter::get_from_package_key \
+			            -package_key dotlrn-portlet \
+			            -parameter AllowChangeEnrollmentPolicy]
+
+set customize_portal_layout_p [parameter::get_from_package_key \
+                                    -package_key dotlrn-portlet \
+				    -parameter AllowCustomizePortalLayout]
+
+set create_limited_user_p [parameter::get_from_package_key \
+                                   -package_key dotlrn-portlet \
+			           -parameter AllowCreateLimitedUsersInCommunity]
+
+set create_guest_user_p [parameter::get_from_package_key \
+                                   -package_key dotlrn-portlet \
+			           -parameter AllowCreateGuestUsersInCommunity]  
+
+set manage_applets_p [parameter::get_from_package_key \
+                                   -package_key dotlrn-portlet \
+			           -parameter AllowManageApplets]
+
 if {$comm_type == "dotlrn_club"} {
     set club_p 1
 } else {
