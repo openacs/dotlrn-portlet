@@ -39,7 +39,10 @@ template::util::list_of_ns_sets_to_multirow \
     -rows [dotlrn_community::list_users $community_id] \
     -var_name "users"
 
+template::multirow extend users community_member_url
+
 template::multirow foreach users { 
     set role [dotlrn_community::get_role_pretty_name -community_id $community_id -rel_type $rel_type]
+    set community_member_url [acs_community_member_url -user_id $user_id]
 }
 
