@@ -18,44 +18,47 @@
 
 %>
 
+
 <if @config.shaded_p@ ne "t">
-
-<ul>
-
+<if @read_private_data_p@ eq 1>
+<table class="table-display" cellpadding=3 cellspacing=0>
+<tr class="table-header"><td align=right colspan=3>
+<a href="members"><if @admin_p@ ne 1>#dotlrn-portlet.Sort#</if><else>#dotlrn-portlet.Sortmanage#</else>
+</if>
+</a>
+</td></tr>
 <multiple name="users">
 <group column="role">
-  <li>
-    <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-    
-    <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-      (<a href="mailto:@users.email@">@users.email@</a>)
-    </if>
-      <i>@users.role@</i>
+<if @users.rownum@ odd>
+<tr class="odd">
+</if>
+<else>
+<tr class="even">
+</else>
 
-    <if @admin_p@ eq 1>
-      [<small> <a href="deregister?user_id=@users.user_id@&amp;referer=members">#dotlrn-portlet.deregister#</a> </small>]
-    </if>
-    <else>
-      <if @user_id@ eq @users.user_id@>
-        [<small> <a href="deregister?">#dotlrn-portlet.deregister#</a> </small>]
-      </if>
-    </else>
-    </li>
-</group>
-<br>
+<td>
+      <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
+</td><td>    
+      <a href="mailto:@users.email@">@users.email@</a>
+</td><td>
+	<i>@users.role@</i>
+</td></tr>
+  </group>
+
+
 </multiple>
-
+</table>
+<if @spam_p@ true>
+<ul>
+<li>        <a href="spam?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a>
 </ul>
-
-<if @admin_p@ eq 1>
-   <form method="get" action="member-add">
-      #dotlrn-portlet.Add_A_Member# <input type="text" name="search_text"><input type="submit" value="search">
-      <input type="hidden" name="referer" value="@referer@">
-    </form>
 </if>
 
 </if>
 <else>
-  <br>
+	#dotlrn-portlet.lt_Sorry_this_functional#
 </else>
-
+</if>
+<else>
+<br>
+</else>

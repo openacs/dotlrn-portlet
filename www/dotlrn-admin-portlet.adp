@@ -31,31 +31,35 @@
   </else>
   <br>
 </if>
+     <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_AddRemove_pretty_name#</li>
 
-  <li><a href="community-edit">#dotlrn-portlet.Edit_properties#</a></li>
-  <br>
-
-  <li><a href="one-community-portal-configure">#dotlrn-portlet.Customize_layout#</a></li>
-  <br>
-
-  <li>
-    #dotlrn-portlet.Membership#
-    <ul>
-      <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_-_AddRemove_pretty_na#</li>
       <li>
         #dotlrn-portlet.lt_Change_Enrollment_Pol# -
           <if @join_policy@ eq "open">#dotlrn-portlet.Open#</if><else><a href="join-policy-toggle?policy=open">#dotlrn-portlet.Open#</a></else>
         | <if @join_policy@ eq "closed">#dotlrn-portlet.Closed#</if><else><a href="join-policy-toggle?policy=closed">#dotlrn-portlet.Closed#</a></else>
         |&nbsp;<if @join_policy@ eq "needs approval">#dotlrn-portlet.Needs_Approval#</if><else><a href="join-policy-toggle?policy=needs%20approval">#dotlrn-portlet.Needs_Approval#</a></else>
       </li>
+<p>
+  <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
       <li>
-        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">#dotlrn-portlet.lt_Add_a_Limited_Access_#</a>
-        - #dotlrn-portlet.lt_-_This_allows_you_to_#
+        #dotlrn-portlet.lt_Change_Bulk_Mail_Poli# -
+          <if @members_can_spam_p@ true>#dotlrn-portlet.All_members#</if><else><a href="spam-policy-toggle?policy=all">#dotlrn-portlet.All_members#</a></else>
+          | <if @members_can_spam_p@ false>#dotlrn-portlet.Only_admins#</if><else><a href="spam-policy-toggle?policy=admins">#dotlrn-portlet.Only_admins#</a></else>
+          #dotlrn-portlet.lt_can_send_bulk_mail_to#
       </li>
-      <li>
-        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">#dotlrn-portlet.lt_Add_a_Limited_Access__1#</a>
-        - #dotlrn-portlet.lt_-_This_allows_you_to__1#
-      </li>
+  <li><a href="community-edit">Edit Group Properties</a> - Change name, description, etc.</li>
+
+<if @subcommunity_p@ eq 0>
+<p>
+<if @club_p@ eq 0>
+<li>
+        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t">#dotlrn-portlet.lt_Create_a_new_Limited_#</a> - #dotlrn-portlet.lt_Only_use_this_to_crea#
+</if>
+<li>        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=f">#dotlrn-portlet.lt_Create_a_new_Limited__1#</a>
+        - #dotlrn-portlet.lt_Only_use_this_to_crea_1#
+</li>
+</ul>
+</if>
     </ul>
   </li>
   <br>
