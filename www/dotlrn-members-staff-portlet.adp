@@ -44,43 +44,39 @@
 
 <p>
 
-<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
+<if @n_tas@ gt 0>
+  <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
   <ul>
-  <if @n_tas@ gt 0>
     <multiple name="users">
       <if @users.rel_type@ eq "dotlrn_ta_rel">
-      <li>     
-        <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-        <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-            (<a href="mailto:@users.email@">@users.email@</a>)
+        <li>     
+          <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
+          <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
+              (<a href="mailto:@users.email@">@users.email@</a>)
           </if>
-        </if>
+        </li>
+      </if>
     </multiple>
-  </if>
-  <else>
-    <li><small>#dotlrn-portlet.no_teaching_assistant_members#</small>
-  </else>
   </ul>
+</if>
 
 <p>
 
-<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %>:
-  <ul>
   <if @n_cas@ gt 0>
-    <multiple name="users">
-      <if @users.rel_type@ eq "dotlrn_ca_rel">
-      <li>     
-        <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-        <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
-          (<a href="mailto:@users.email@">@users.email@</a>)
-          </if>
+    <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %>:
+    <ul>
+      <multiple name="users">
+        <if @users.rel_type@ eq "dotlrn_ca_rel">
+          <li>     
+            <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
+            <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
+              (<a href="mailto:@users.email@">@users.email@</a>)
+            </if>
+          </li>
         </if>
       </multiple>
-    </if>
-    <else>
-      <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
-    </else>
     </ul>
+  </if>
 
   <if @read_private_data_p@>
     <br>
