@@ -21,16 +21,14 @@
 
 <ul>
 
-<if @dotlrn_admin_p@ eq 1>
-  <li><a href="@dotlrn_admin_url@">dotLRN Administration</a>
-</if>
+  <if @dotlrn_admin_p@ eq 1>
+    <li><a href="@dotlrn_admin_url@">dotLRN Administration</a>
+  </if>
 
-  <p></p>
   <li>
     <a href="one-community-portal-template">Customize This Portal</a>
   </li>
 
-  <p></p>
   <li>
     Membership
     <ul>
@@ -53,17 +51,16 @@
     </ul>
   </li>
 
-  <p></p>
   <li>@sub_pretty_plural@
-        <ul>
-        <multiple name="subgroups">
-        <li> <a href=@subgroups.community_url@>@subgroups.pretty_name@</a>
-        </multiple>
-        <li> <a href=subcommunity-new>New @sub_pretty_name@</a>
-        </ul>
+    <ul>
+      <multiple name="subgroups">
+        <li><a href=@subgroups.url@>@subgroups.pretty_name@</a><small>
+            [<a href=@subgroups.url@one-community-admin>Admin</a> |
+            <a href=subcommunity-delete>Delete</a>]</small>
+      </multiple>
+      <li><a href=subcommunity-new>New @sub_pretty_name@</a></ul>
   </li>
-
-  <p></p>
+  
   <li><a href="applets">Manage Applets</a></li>
 
 </ul>

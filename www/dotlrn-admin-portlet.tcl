@@ -15,9 +15,10 @@
 #
 
 
-# www/news-portlet.tcl
+# www/dotlrn-admin-portlet.tcl
 ad_page_contract {
-    The display logic for the dotlrn admin portlet
+    The display logic for the dotlrn admin portlet. This shows the 
+    "Group Administration" section of the group admin page.
 
     @author Arjun Sanyal (arjun@openforce.net)
     @author Ben Adida (ben@openforce)
@@ -26,23 +27,22 @@ ad_page_contract {
     
 }
 
+# get some basics
 array set config $cf	
 set community_id $config(community_id)
-
 set dotlrn_admin_p [dotlrn::admin_p]
 set dotlrn_admin_url "[dotlrn::get_url]/admin"
-
-db_1row select_community_info {}
-
-db_multirow subgroups select_subgroups {}
-
-# hack for now
-set n_subgroups 0
-
-# get the right pretty name, plural for subgroups
 set sub_pretty_name [ad_parameter subcommunities_pretty_name dotlrn]
 set sub_pretty_plural [ad_parameter subcommunities_pretty_plural dotlrn]
 
+# get the community info 
+db_1row select_community_info {}
 
-ad_return_template
+# get the subcomm info
+set rows [dotlrn_community::get_subcomm_info_list -community_id $community_id]
+template::util::list_of_ns_sets_to_multirow \
+	-rows $rows \
+	-var_name subgroups
+
+
 
