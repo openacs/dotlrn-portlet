@@ -26,7 +26,7 @@ ad_page_contract {
 array set config $cf	
 set community_id $config(community_id)
 
-set subcomm_pretty_plural [parameter::get -parameter subcommunities_pretty_plural]
+set subcomm_pretty_plural [dotlrn::parameter -name subcommunities_pretty_plural]
 set subcomm_data [dotlrn_community::get_subcomm_chunk -community_id $community_id]
 
 set has_subcomm_p 0
