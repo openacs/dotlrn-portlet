@@ -66,5 +66,5 @@ Course Assistants:
 
 <br>
 
-FIXME: student list link 
+<a href=members>Student List</a>
 </if>
