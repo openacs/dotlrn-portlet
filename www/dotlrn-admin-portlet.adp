@@ -23,6 +23,12 @@
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
   <li><a href="clone">Copy this group</a></li>
+  <if @archived_p@ eq t>
+  <li><a href="@dotlrn_admin_url@/archived-communities"><font color=red>This group is archived</font></a>
+  </if>
+  <else>
+    <li><a href="subcommunity-archive">Archive this group</a></li>
+  </else>
   <br>
 </if>
 
