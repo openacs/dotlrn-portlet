@@ -84,7 +84,7 @@ namespace eval dotlrn_portlet {
 	    
 	    # BIG BAD THING (fixme: ben)
 	    if {[dotlrn::user_can_read_private_data_p]} {
-		append data "<p><a href="members">List of Members</a>"
+		append data "<p><a href=\"members\">List of Members</a>"
 	    }
 	} else {
 	    set data ""
