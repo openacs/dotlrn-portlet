@@ -51,6 +51,9 @@ set members_can_spam_p [permission::permission_p -party_id $members_rel_id -obje
 # get the community info
 db_1row select_community_info {}
 
+# get Guest policy info
+set guests_can_view_private_data_p [dotlrn_privacy::guests_can_view_private_data_p -object_id $community_id]
+
 # get the subcomm info
 set rows [dotlrn_community::get_subcomm_info_list -community_id $community_id]
 template::util::list_of_ns_sets_to_multirow -rows $rows -var_name subgroups
