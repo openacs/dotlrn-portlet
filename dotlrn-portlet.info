@@ -33,7 +33,8 @@
             <file type="query_file" path="www/dotlrn-admin-portlet.xql"/>
         </files>
         <parameters>
-        <!-- No version parameters -->
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="subcommunities_pretty_name"  default="Subcommunity" description="the nice name for the subcommunities "/>
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="subcommunities_pretty_plural"  default="Subcommunities" description="plural of above"/>
         </parameters>
 
     </version>

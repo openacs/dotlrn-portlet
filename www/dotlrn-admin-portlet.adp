@@ -34,7 +34,7 @@
   </li>
 
   <p></p>
-  <li>@sub_pretty_plural@:
+  <li>@sub_pretty_plural@
         <ul>
         <multiple name="subgroups">
         <li> <a href=@subgroups.community_url@>@subgroups.pretty_name@</a>
