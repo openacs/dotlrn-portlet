@@ -42,7 +42,7 @@ namespace eval dotlrn_portlet {
 	
 	# The default param must be configured
 	set key "community_id"
-	set value [portal::get_element_param $element_id $key]
+	# set value [portal::get_element_param $element_id $key]
 
 	portal::set_element_param $element_id $key $community_id
 
@@ -68,14 +68,12 @@ namespace eval dotlrn_portlet {
 		
 	# for now query the DM directly
 	if { [db_0or1row select_comminity_info $query] } {
-	    set data "$pretty_name - <i>$description</i>"
+	    set data "$pretty_name - <i>descriptions not available yet</i>"
 	} else {
 	    set data "Community info not found. Contact webmaster, please!"
 	}
 
 	append data "<p><a href=student-list>List of Students</a>"
-
-	ns_log notice "AKS-dotlrn-portlet got here $data"
 	
 	return $data
 
