@@ -20,7 +20,7 @@
 
 <!-- aks: shading is broken for this portlet -->
 
-Professors:
+<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
   <ul>
   <if @n_profs@ gt 0>
     <multiple name="users">
@@ -34,13 +34,13 @@ Professors:
     </multiple>
   </if>
   <else>
-    <li><small>No Professors</small>
+    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %></small>
   </else>
   </ul>
 
 <p>
 
-Teaching Assistants:
+<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
   <ul>
   <if @n_tas@ gt 0>
     <multiple name="users">
@@ -54,13 +54,13 @@ Teaching Assistants:
     </multiple>
   </if>
   <else>
-    <li><small>No Teaching Assistants</small>
+    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %></small>
   </else>
   </ul>
 
 <p>
 
-Course Assistants:
+<%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %>:
   <ul>
   <if @n_cas@ gt 0>
     <multiple name="users">
@@ -74,11 +74,10 @@ Course Assistants:
     </multiple>
   </if>
   <else>
-    <li><small>No Course Assistants</small>
+    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
   </else>
   </ul>
 
 <br>
 
-<a href="members">Student List</a>
-
+<a href="members"><%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_student_rel] %> List</a>
