@@ -27,9 +27,8 @@ namespace eval dotlrn_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "FIXME name Information"
+	return "Subgroups Plus"
     }
-
 
     ad_proc -public link {
     } {

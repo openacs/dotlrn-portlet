@@ -2,10 +2,18 @@
 
   @pretty_name@ - <i>@description@</i>
 
-  <P>
+  <if @has_subcomm_p@ eq 1>
 
-  @subcomm_data@
+    <P>
 
+    Subcommunities: <P>
+  
+    <ul>
+
+    @subcomm_data@
+  
+    </ul>
+  </if>
 </if>
 <else>
   <br>
