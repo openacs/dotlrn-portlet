@@ -25,7 +25,7 @@
   <br>
 </if>
 
-  <li><a href="community-edit">Edit the properties of this group</a></li>
+  <li><a href="community-edit">Edit properties</a></li>
   <br>
 
   <li><a href="one-community-portal-configure">Customize layout</a></li>
@@ -62,8 +62,6 @@
             <a href="@subgroups.url@">@subgroups.pretty_name@</a>
             [<small>
               <a href="@subgroups.url@one-community-admin">Administer</a>
-              |
-              <a href="subcommunity-edit?community_id=@subgroups.community_id@">Rename</a>
               |
               <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
             </small>]
