@@ -63,20 +63,19 @@
 
   <li>@sub_pretty_plural@
     <ul>
-      <if @subgroups:rowcount@ gt 0>
-        <multiple name="subgroups">
-          <li>
-            <a href="@subgroups.url@">@subgroups.pretty_name@</a>
-            [<small>
-              <a href="@subgroups.url@one-community-admin">Administer</a>
-              |
-              <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
-            </small>]
-          </li>
-        </multiple>
-        <br>
-      </if>
-      <li><a href="subcommunity-new">New @sub_pretty_name@</a></ul>
+<multiple name="subgroups">
+      <li>
+        <a href="@subgroups.url@">@subgroups.pretty_name@</a>
+        <nobr><small>[
+          <a href="@subgroups.url@one-community-admin">Administer</a>
+          |
+          <a href="subcommunity-archive?community_id=@subgroups.community_id@">Archive</a>
+        ]</small></nobr>
+      </li>
+</multiple>
+      <br>
+      <li><a href="subcommunity-new">New @sub_pretty_name@</a>
+    </ul>
   </li>
   <br>
   
