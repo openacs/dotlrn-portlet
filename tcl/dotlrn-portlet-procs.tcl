@@ -75,7 +75,10 @@ namespace eval dotlrn_portlet {
 		set data "Community info not found. Contact webmaster, please!"
 	    }
 	    
-	    append data "<p><a href=student-list>List of Students</a>"
+	    # BIG BAD THING (fixme: ben)
+	    if {[dotlrn::user_can_read_sensitive_data_p]} {
+		append data "<p><a href=student-list>List of Students</a>"
+	    }
 	} else {
 	    set data ""
 	}
