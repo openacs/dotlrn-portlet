@@ -69,6 +69,7 @@ namespace eval dotlrn_portlet {
 	# Tell portal to add this element to the page
 	set element_id [portal::add_element \
                 -pretty_name [get_pretty_name] \
+                -force_region 2 \
                 $portal_id \
                 [my_name]]
 	

@@ -61,6 +61,7 @@ namespace eval dotlrn_members_staff_portlet {
                 -pretty_name [get_pretty_name] \
                 -portal_id $portal_id \
                 -portlet_name [my_name] \
+                -force_region 2 \
                 -value_id $community_id \
                 -key community_id]
     }
