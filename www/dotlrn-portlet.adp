@@ -36,10 +36,11 @@
 
   </if>
   <else>
-    <small>No @subcomm_pretty_plural@</small>
+    <small>#dotlrn-portlet.lt_No_subcomm_pretty_plu#</small>
   </else>
 
 </if>
 <else>
   <br>
 </else>
+

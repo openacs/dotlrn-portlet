@@ -33,11 +33,11 @@
       <i>@users.role@</i>
 
     <if @admin_p@ eq 1>
-      [<small> <a href="deregister?user_id=@users.user_id@&amp;referer=members">deregister</a> </small>]
+      [<small> <a href="deregister?user_id=@users.user_id@&amp;referer=members">#dotlrn-portlet.deregister#</a> </small>]
     </if>
     <else>
       <if @user_id@ eq @users.user_id@>
-        [<small> <a href="deregister?">deregister</a> </small>]
+        [<small> <a href="deregister?">#dotlrn-portlet.deregister#</a> </small>]
       </if>
     </else>
     </li>
@@ -49,7 +49,7 @@
 
 <if @admin_p@ eq 1>
    <form method="get" action="member-add">
-      Add A Member: <input type="text" name="search_text"><input type="submit" value="search">
+      #dotlrn-portlet.Add_A_Member# <input type="text" name="search_text"><input type="submit" value="search">
       <input type="hidden" name="referer" value="@referer@">
     </form>
 </if>
@@ -58,3 +58,4 @@
 <else>
   <br>
 </else>
+

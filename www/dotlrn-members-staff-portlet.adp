@@ -34,7 +34,7 @@
     </multiple>
   </if>
   <else>
-    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %></small>
+    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %></small>
   </else>
   </ul>
 
@@ -54,7 +54,7 @@
     </multiple>
   </if>
   <else>
-    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %></small>
+    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %></small>
   </else>
   </ul>
 
@@ -74,11 +74,12 @@
     </multiple>
   </if>
   <else>
-    <li><small>No <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
+    <li><small>#dotlrn-portlet.No# <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %></small>
   </else>
   </ul>
 
 <if @read_private_data_p@>
 <br>
-<a href="members"><%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_student_rel] %> List</a>
+<a href="members"><%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_student_rel] %> #dotlrn-portlet.List#</a>
 </if>
+

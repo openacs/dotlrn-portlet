@@ -36,7 +36,7 @@ namespace eval dotlrn_members_staff_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Staff List"
+	return "#dotlrn-portlet.members_staff_portlet_pretty_name#"
     }
 
     ad_proc -public link {

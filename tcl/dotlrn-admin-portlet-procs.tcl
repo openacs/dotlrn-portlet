@@ -34,7 +34,7 @@ namespace eval dotlrn_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Group Administration"
+	return "#dotlrn-portlet.admin_pretty_name#"
     }
 
     ad_proc -public my_package_key {
