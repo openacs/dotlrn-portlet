@@ -15,6 +15,7 @@
   <msg key="lt_can_send_bulk_mail_to">can send bulk mail to this community.</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Change Bulk Mail Policy</msg>
   <msg key="lt_Change_Enrollment_Pol">Change Enrollment Policy</msg>
+  <msg key="lt_Change_Name_Portlet">Change Name of Portlet</msg>
   <msg key="lt_Create_a_new_Limited_">Create a new Limited Access user</msg>
   <msg key="lt_Create_a_new_Limited__1">Create a new Limited Access Guest user</msg>
   <msg key="lt_Customize_Portal_Layo">Customize Portal Layout</msg>

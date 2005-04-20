@@ -53,6 +53,7 @@
 <p>
 <if @customize_portal_layout_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
+  <li><a href="element-list">#dotlrn-portlet.lt_Change_Name_Portlet#</a></li>
 </if>
       <li>
         #dotlrn-portlet.lt_Change_Bulk_Mail_Poli# -
