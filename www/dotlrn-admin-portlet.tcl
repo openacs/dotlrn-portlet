@@ -64,7 +64,7 @@ set manage_applets_p [parameter::get_from_package_key \
                                    -package_key dotlrn-portlet \
 			           -parameter AllowManageApplets]
 
-if {$comm_type == "dotlrn_club"} {
+if {$comm_type == "dotlrn_community"} {
     set club_p 1
 } else {
     set club_p 0
