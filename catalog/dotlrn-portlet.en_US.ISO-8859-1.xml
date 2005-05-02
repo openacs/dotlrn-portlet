@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.1.0b1" locale="en_US" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.1.1" locale="en_US" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Group Administration</msg>
   <msg key="Administer">Administer</msg>
@@ -7,6 +7,7 @@
   <msg key="Archive">Archive</msg>
   <msg key="Archive_this_group">Archive this group</msg>
   <msg key="change_name_etc">Change name, description, etc.</msg>
+  <msg key="Change_term">Change term for %pretty_name% from %term_name%</msg>
   <msg key="Closed">Closed</msg>
   <msg key="Copy_this_group">Copy this group</msg>
   <msg key="edit_gr_props">Edit Group Properties</msg>

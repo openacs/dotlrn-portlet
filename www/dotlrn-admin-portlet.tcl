@@ -68,6 +68,7 @@ if {$comm_type == "dotlrn_club"} {
     set club_p 1
 } else {
     set club_p 0
+    set term_name "[dotlrn_class::get_term_name -class_instance_id $community_id] [dotlrn_class::get_term_year -class_instance_id $community_id]"
 }
 
 set members_rel_id [dotlrn_community::get_members_rel_id -community_id $community_id]
