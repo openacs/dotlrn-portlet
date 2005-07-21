@@ -18,4 +18,16 @@
         </querytext>
     </fullquery>
 
+    <fullquery name="">
+	<querytext>
+	    select
+      		enabled_p as member_email_enabled_p
+    	    from
+      		dotlrn_member_emails
+    	    where
+      		community_id = :community_id and
+      		type = 'on join'
+	</querytext>
+    </fullquery>
+
 </queryset>

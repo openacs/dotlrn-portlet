@@ -39,6 +39,16 @@
 
 <if @manage_membership_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
      <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_AddRemove_pretty_name#</li>
+     <if @member_email_enabled_p@ defined>
+       <li><a href="member-email">Edit Welcome Message</a>
+       - <if @member_email_enabled_p@ eq "t"><b>Enabled</b></if>
+         <else><a href="member-email-toggle">Enabled</a></else> |
+         <if @member_email_enabled_p@ ne "t"><b>Disabled</b></if>
+         <else><a href="member-email-toggle">Disabled</a></else>
+     </if>
+     <else>
+       <li><a href="member-email">Create Welcome Message</a>
+     </else></li>
 </if>
 
 <if @enrollment_policy_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
