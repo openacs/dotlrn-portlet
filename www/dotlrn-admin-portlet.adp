@@ -22,7 +22,7 @@
 
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
-  <li><a href="dotlrn-group-admin-faq">Administrator FAQ</a></li>
+  <li><a href="dotlrn-group-admin-faq">#dotlrn-portlet.Administrator_FAQ#</a></li>
   <li><a href="clone">#dotlrn-portlet.Copy_this_group#</a></li>
   <if @archived_p@ eq t>
   <li><a href="@dotlrn_admin_url@/archived-communities"><font color=red>#dotlrn-portlet.lt_This_group_is_archive#</font></a></li>
@@ -32,7 +32,7 @@
   </else>
   <li>
     #dotlrn-portlet.lt_Guests_Can_View_Membership_Info# -
-      <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes">Yes</a>&nbsp;|&nbsp;<b>No</b></else>
+      <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes">#acs-kernel.common_Yes#</a>&nbsp;|&nbsp;<b>#acs-kernel.common_no#</b></else>
   </li>
   <br>
 </if>
@@ -40,14 +40,14 @@
 <if @manage_membership_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
      <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_AddRemove_pretty_name#</li>
      <if @member_email_enabled_p@ defined>
-       <li><a href="member-email">Edit Welcome Message</a>
-       - <if @member_email_enabled_p@ eq "t"><b>Enabled</b></if>
-         <else><a href="member-email-toggle">Enabled</a></else> |
-         <if @member_email_enabled_p@ ne "t"><b>Disabled</b></if>
-         <else><a href="member-email-toggle">Disabled</a></else>
+       <li><a href="member-email">#dotlrn-portlet.Edit_Welcome_Message#</a>
+       - <if @member_email_enabled_p@ eq "t"><b>#acs-subsite.Enabled#</b></if>
+         <else><a href="member-email-toggle">#acs-subsite.Enabled#</a></else> |
+         <if @member_email_enabled_p@ ne "t"><b>#acs-subsite.Disabled#</b></if>
+         <else><a href="member-email-toggle">#acs-subsite.Disabled#</a></else>
      </if>
      <else>
-       <li><a href="member-email">Create Welcome Message</a>
+       <li><a href="member-email">#dotlrn-portlet.lt_Create_Welcome_Messag#</a>
      </else></li>
 </if>
 
@@ -115,3 +115,4 @@
 </if>
 
 </ul>
+
