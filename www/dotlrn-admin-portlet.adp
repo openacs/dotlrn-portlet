@@ -30,7 +30,10 @@
   <else>
     <li><a href="subcommunity-archive">#dotlrn-portlet.Archive_this_group#</a></li>
   </else>
-  <li>
+   <if @club_p@ eq 0>
+     <li><a href="class-term-change?pretty_name=@pretty_name;noquote@">#dotlrn-portlet.Change_term#</a></li>
+   </if>
+   <li>
     #dotlrn-portlet.lt_Guests_Can_View_Membership_Info# -
       <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes">#acs-kernel.common_Yes#</a>&nbsp;|&nbsp;<b>#acs-kernel.common_no#</b></else>
   </li>
@@ -63,6 +66,7 @@
 <p>
 <if @customize_portal_layout_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
+  <li><a href="element-list">#dotlrn-portlet.lt_Change_Name_Portlet#</a></li>
 </if>
       <li>
         #dotlrn-portlet.lt_Change_Bulk_Mail_Poli# -
