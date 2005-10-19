@@ -19,7 +19,6 @@
 %>
 
 <ul>
-
 <if @dotlrn_admin_p@ eq 1>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
   <li><a href="dotlrn-group-admin-faq">Administrator FAQ</a></li>
