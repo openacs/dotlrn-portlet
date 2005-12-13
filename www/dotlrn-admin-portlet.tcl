@@ -94,3 +94,5 @@ db_0or1row member_email {
       community_id = :community_id and
       type = 'on join'
 }
+
+set referer [ns_conn url]

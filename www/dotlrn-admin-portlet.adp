@@ -68,6 +68,7 @@
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
   <li><a href="element-list">#dotlrn-portlet.lt_Change_Name_Portlet#</a></li>
 </if>
+ <li><a href="change-site-template?referer=@referer@">#dotlrn.Customize_Template#</a></li>
       <li>
         #dotlrn-portlet.lt_Change_Bulk_Mail_Poli# -
           <if @members_can_spam_p@ true><b>#dotlrn-portlet.All_members#</b></if><else><a href="spam-policy-toggle?policy=all">#dotlrn-portlet.All_members#</a></else>
