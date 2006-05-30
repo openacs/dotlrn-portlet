@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.1.0b1" locale="it_IT" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.2.0a1" locale="it_IT" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Amministrazione del gruppo</msg>
   <msg key="Administer">Amministra</msg>
   <msg key="All_members">Tutti i membri</msg>
   <msg key="Archive">Archivio</msg>
   <msg key="Archive_this_group">Archivia questo gruppo</msg>
+  <msg key="change_name_etc">Cambia nome, descrizione, ecc.</msg>
   <msg key="Closed">Chiuso</msg>
   <msg key="Copy_this_group">Copia questo gruppo</msg>
+  <msg key="edit_gr_props">Modifica le Proprietà del Gruppo</msg>
   <msg key="Email_Members">Invia un email ai membri</msg>
   <msg key="lt_AddRemove_pretty_name">Aggiungi/Rimuovi membri di %pretty_name%</msg>
   <msg key="lt_can_send_bulk_mail_to">può inviare email di massa a questa comunità</msg>
@@ -16,6 +18,7 @@
   <msg key="lt_Create_a_new_Limited_">Crea un nuovo utente con accesso limitato</msg>
   <msg key="lt_Create_a_new_Limited__1">Crea un nuovo utente ospite con accesso limitato</msg>
   <msg key="lt_Customize_Portal_Layo">Personalizza l'impaginazione degli elementi del portale</msg>
+  <msg key="lt_Guests_Can_View_Membership_Info">Può un utente vedere informazione sulla appartenenza ai gruppi ?</msg>
   <msg key="lt_No_subcomm_pretty_plu">Nessun sottogruppo</msg>
   <msg key="lt_Only_use_this_to_crea">Usa questa opzione solo per creare un'account per studenti registrati altrove che non hanno account in classi precedenti.</msg>
   <msg key="lt_Only_use_this_to_crea_1">Usa questa opzione solo per creare account per utenti non affiliati che non sono ancora registrati. Le informazioni riguardo i membri di questa comunità non saranno disponibili agli altri utenti.</msg>
