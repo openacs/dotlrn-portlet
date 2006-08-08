@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.1.0b1" locale="no_NO" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.2.0b2" locale="no_NO" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Gruppeadministrasjon</msg>
   <msg key="Administer">Administrer</msg>
@@ -25,7 +25,7 @@
   <msg key="lt_Sorry_this_functional">Beklager, denne tjenesten er ikke tilgjengelig for gjester.</msg>
   <msg key="lt_This_group_is_archive">Denne gruppen er arkivert</msg>
   <msg key="Manage_Applets">Behanlde modular (ruter)</msg>
-  <msg key="Manage_Membership">Mehandle medlemsskap</msg>
+  <msg key="Manage_Membership">Behandle medlemsskap</msg>
   <msg key="Member_List">Medlemsliste</msg>
   <msg key="members_portlet_pretty_name">medlemmer</msg>
   <msg key="members_staff_portlet_pretty_name">Stab</msg>

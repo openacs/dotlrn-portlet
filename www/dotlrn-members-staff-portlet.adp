@@ -21,7 +21,7 @@
 <!-- aks: shading is broken for this portlet -->
 
 <if @community_id@ eq 0>
-  <small>No community was specified</small>
+  <small>#dotlrn-portlet.lt_No_community_was_spec#</small>
 </if>
 <else>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
@@ -87,4 +87,5 @@
   </else>
   </ul>
 </else>
+
 

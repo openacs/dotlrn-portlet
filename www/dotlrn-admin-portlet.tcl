@@ -64,10 +64,11 @@ set manage_applets_p [parameter::get_from_package_key \
                                    -package_key dotlrn-portlet \
 			           -parameter AllowManageApplets]
 
-if {$comm_type == "dotlrn_club"} {
+if {$comm_type != [dotlrn_class::community_type]} {
     set club_p 1
 } else {
     set club_p 0
+    set term_name "[dotlrn_class::get_term_name -class_instance_id $community_id] [dotlrn_class::get_term_year -class_instance_id $community_id]"
 }
 
 set members_rel_id [dotlrn_community::get_members_rel_id -community_id $community_id]
@@ -82,3 +83,16 @@ set guests_can_view_private_data_p [dotlrn_privacy::guests_can_view_private_data
 # get the subcomm info
 set rows [dotlrn_community::get_subcomm_info_list -community_id $community_id]
 template::util::list_of_ns_sets_to_multirow -rows $rows -var_name subgroups
+
+# get member email notification
+db_0or1row member_email {
+    select
+      enabled_p as member_email_enabled_p
+    from
+      dotlrn_member_emails
+    where
+      community_id = :community_id and
+      type = 'on join'
+}
+
+set referer [ns_conn url]
