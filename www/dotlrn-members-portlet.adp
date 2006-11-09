@@ -22,11 +22,13 @@
 <if @config.shaded_p@ ne "t">
 <if @read_private_data_p@ eq 1>
 
-<table class="table-display" cellpadding=3 cellspacing=0>
+<table class="table-display" cellpadding=3 cellspacing=0 summary="#dotlrn-portlet.members_portlet_pretty_name#">
+<caption>#dotlrn-portlet.members_portlet_pretty_name#</caption>
   <tr class="table-header">
-    <td align=right colspan=4>
-      <a href="members"><if @admin_p@ ne 1>#dotlrn-portlet.Sort#</if><else>#dotlrn-portlet.Sortmanage#</else></a>
-    </td>
+	<th id="bio"></th>
+    <th id="name">#dotlrn.Name#</th>
+	<th id="email">#dotlrn.Email_1#</th>
+	<th id="role">#dotlrn.Role#</th>
   </tr>
 
   <multiple name="users">
@@ -38,18 +40,18 @@
   <tr class="even">
   </else>
 
-    <td>
+    <td headers="bio">
       <if @users.portrait_p@ true or @users.bio_p@ true>
         <a href="@users.community_member_url@"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" border="0"></a>
       </if>
     </td>
-    <td>
+    <td headers="name">
       <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
     </td>
-    <td>
+    <td headers="email">
       @users.email;noquote@
     </td>
-    <td>
+    <td headers="role">
 	<i>@users.role@</i>
     </td>
   </tr>
@@ -57,14 +59,18 @@
   </multiple>
 </table>
 
-<if @spam_p@ true>
+<if @spam_p@ true or @admin_p@ eq 1>
 <p>
 <ul>
+<if @spam_p@ true>
   <li><a href="spam-recipients?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a></li>
+</if>
+<if @admin_p@ eq 1>
+      <li><a href="members">#dotlrn-portlet.Sortmanage#</a></li>
+</if>
 </ul>
 </p>
 </if>
-
 </if>
 <else>
         <% # The user is not allowed to read the member list - he/she is maybe a guest %>
