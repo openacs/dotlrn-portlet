@@ -18,9 +18,8 @@
 
 %>
 
-<ul>
-
 <if @dotlrn_admin_p@ eq 1>
+<ul>
   <li><a href="@dotlrn_admin_url@">@admin_pretty_name@</a></li>
   <li><a href="dotlrn-group-admin-faq">#dotlrn-portlet.Administrator_FAQ#</a></li>
   <li><a href="clone">#dotlrn-portlet.Copy_this_group#</a></li>
@@ -37,9 +36,10 @@
     #dotlrn-portlet.lt_Guests_Can_View_Membership_Info# -
       <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes">#acs-kernel.common_Yes#</a>&nbsp;|&nbsp;<b>#acs-kernel.common_no#</b></else>
   </li>
-  <br>
+</ul>
 </if>
 
+<ul>
 <if @manage_membership_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
      <li><a href="members">#dotlrn-portlet.Manage_Membership#</a> - #dotlrn-portlet.lt_AddRemove_pretty_name#</li>
      <if @member_email_enabled_p@ defined>
@@ -62,8 +62,9 @@
         |&nbsp;<if @join_policy@ eq "needs approval"><b>#dotlrn-portlet.Needs_Approval#</b></if><else><a href="join-policy-toggle?policy=needs%20approval">#dotlrn-portlet.Needs_Approval#</a></else>
       </li>
 </if>
+</ul>
 
-<p>
+<ul>
 <if @customize_portal_layout_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
   <li><a href="element-list">#dotlrn-portlet.lt_Change_Name_Portlet#</a></li>
@@ -76,9 +77,10 @@
           #dotlrn-portlet.lt_can_send_bulk_mail_to#
       </li>
   <li><a href="community-edit">#dotlrn-portlet.edit_gr_props#</a> - #dotlrn-portlet.change_name_etc#</li>
+</ul>
 
 <if @subcommunity_p@ eq 0>
-<p>
+<ul>
 
   <if @club_p@ eq 0>
     <if @create_limited_user_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
@@ -93,9 +95,10 @@
         - #dotlrn-portlet.lt_Only_use_this_to_crea_1#
      </li>
    </if>
+</ul>
 </if>
 
-  <br>
+<ul>
 
   <li>@sub_pretty_plural@
     <ul>
@@ -109,15 +112,13 @@
         ]</small></nobr>
       </li>
 </multiple>
-      <br>
-      <li><a href="subcommunity-new">#dotlrn-portlet.New_sub_pretty_name#</a>
-    </ul>
+	<li><p><a href="subcommunity-new">#dotlrn-portlet.New_sub_pretty_name#</a></p></li>
+      </ul>
   </li>
-  <br>
+  </ul>
 
 <if @manage_applets_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
+<ul>
   <li><a href="applets">#dotlrn-portlet.Manage_Applets#</a></li>
-</if>
-
 </ul>
-
+</if>
