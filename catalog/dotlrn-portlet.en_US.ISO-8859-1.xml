@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.2.0b2" locale="en_US" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-portlet" package_version="2.2.0" locale="en_US" charset="ISO-8859-1">
 
   <msg key="admin_pretty_name">Group Administration</msg>
   <msg key="Administer">Administer</msg>
@@ -11,11 +11,16 @@
   <msg key="Change_term">Change term for %pretty_name% from %term_name%</msg>
   <msg key="Closed">Closed</msg>
   <msg key="Copy_this_group">Copy this group</msg>
+  <msg key="disable_welcome_message">Disable welcome message</msg>
   <msg key="Disabled">Disabled</msg>
   <msg key="edit_gr_props">Edit Group Properties</msg>
   <msg key="Edit_Welcome_Message">Edit Welcome Message</msg>
   <msg key="Email_Members">Email Members</msg>
+  <msg key="enable_welcome_message">Enable welcome message</msg>
   <msg key="Enabled">Enabled</msg>
+  <msg key="goto_admin_pretty_name">Go to %admin_pretty_name%</msg>
+  <msg key="goto_Administrator_FAQ">Go to FAQ administration</msg>
+  <msg key="goto_Manage_Membership">Go to membership administration page</msg>
   <msg key="lt_AddRemove_pretty_name">Add/Remove %pretty_name% members</msg>
   <msg key="lt_can_send_bulk_mail_to">can send bulk mail to this community.</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Change Bulk Mail Policy</msg>
@@ -47,4 +52,6 @@
   <msg key="Open">Open</msg>
   <msg key="Sort">Sort</msg>
   <msg key="Sortmanage">Sort/manage</msg>
+  <msg key="Toggle_privacy_policy_to_no">Change privacy policy so guest users can not view group membership information. </msg>
+  <msg key="Toggle_privacy_policy_to_yes">Change privacy policy so guest users can view group membership information. </msg>
 </message_catalog>
