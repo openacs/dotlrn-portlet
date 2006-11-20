@@ -2,6 +2,14 @@
 
 <queryset>
 
+    <fullquery name="update_max_members">
+        <querytext>
+            update dotlrn_communities_all set
+              max_members = :size
+            where community_id = :community_id
+        </querytext>
+    </fullquery>
+
     <fullquery name="select_community_info">
         <querytext>
             select community_type,
@@ -11,7 +19,8 @@
                    portal_id,
                    non_member_portal_id,
                    admin_portal_id, 
-                   archived_p
+                   archived_p,
+		   max_members
             from dotlrn_communities_all, groups
             where community_id = :community_id
             and groups.group_id = community_id

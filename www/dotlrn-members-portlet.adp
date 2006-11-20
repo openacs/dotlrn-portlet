@@ -48,8 +48,8 @@
     <td headers="name">
       <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
     </td>
-    <td headers="email">
-      @users.email;noquote@
+    <td>
+      <a href="mailto:@users.email@">@users.email;noquote@</a>
     </td>
     <td headers="role">
 	<i>@users.role@</i>
@@ -78,6 +78,5 @@
 </else>
 </if>
 <else>
-   <% # The portal is shaded - should not be displayed %>
-   <br>
+   <small>#new-portal.when_portlet_shaded#</small>
 </else>

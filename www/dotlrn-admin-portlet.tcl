@@ -23,6 +23,8 @@ ad_page_contract {
     @author Arjun Sanyal (arjun@openforce.net)
     @author Ben Adida (ben@openforce)
     @cvs_id $Id$
+} {
+    {size:optional}
 } -properties {
 }
 
@@ -35,6 +37,18 @@ set sub_pretty_name [ad_parameter -localize subcommunities_pretty_name dotlrn]
 set sub_pretty_plural [ad_parameter -localize subcommunities_pretty_plural dotlrn]
 set admin_pretty_name [ad_parameter -localize dotlrn_admin_pretty_name dotlrn]
 set subcommunity_p [dotlrn_community::subcommunity_p -community_id $community_id]
+
+set max_members [dotlrn_community::max_members -community_id $community_id]
+
+if {[exists_and_not_null size]} {
+    if {$size >= 0} {
+        db_dml update_max_members {}
+        set max_members $size
+    } else {
+        ad_return_complaint 1 "[_ dotlrn.Invalid_size]"
+        ad_script_abort
+    }
+}
 
 #The community_type is dotlrn_club for "communties" and the subject name for classes.
 set comm_type [dotlrn_community::get_community_type_from_community_id $community_id]
