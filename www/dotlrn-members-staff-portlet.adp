@@ -18,7 +18,7 @@
 
 %>
 
-<if @config.shaded_p@ ne "t">
+<!-- aks: shading is broken for this portlet -->
 
 <if @community_id@ eq 0>
   <small>#dotlrn-portlet.lt_No_community_was_spec#</small>
@@ -39,9 +39,12 @@
     </multiple>
   </if>
   <else>
-    <small>#dotlrn-portlet.no_instructor_members#</small>
+    <li><small>#dotlrn-portlet.no_instructor_members#</small></li>
   </else>
-  </ul></br>
+  </ul>
+
+<p>
+
 <if @n_tas@ gt 0>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
   <ul>
@@ -55,8 +58,10 @@
         </li>
       </if>
     </multiple>
-  </ul></br>
+  </ul>
 </if>
+
+<p>
 
   <if @n_cas@ gt 0>
     <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %>:
@@ -75,7 +80,7 @@
   </if>
 
   <if @read_private_data_p@>
-    </br>
+    <br>
     <a href="members">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
@@ -84,10 +89,4 @@
   </ul>
 </else>
 
-</if>
-<else>
-  <small>
-    #new-portal.when_portlet_shaded#
-  </small>
-</else>
 

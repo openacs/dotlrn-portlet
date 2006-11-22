@@ -50,7 +50,6 @@
   <msg key="no_teaching_assistant_members">No %teaching_assistant_role_pretty_plural%</msg>
   <msg key="Only_admins">Only admins</msg>
   <msg key="Open">Open</msg>
-  <msg key="Size">Size:</msg>
   <msg key="Sort">Sort</msg>
   <msg key="Sortmanage">Sort/manage</msg>
   <msg key="Toggle_privacy_policy_to_no">Change privacy policy so guest users can not view group membership information. </msg>

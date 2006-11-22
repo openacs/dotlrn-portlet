@@ -67,7 +67,6 @@
 <ul>
 <if @customize_portal_layout_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
   <li><a href="one-community-portal-configure">#dotlrn-portlet.lt_Customize_Portal_Layo#</a></li>
-  <li><if @subcommunity_p@ eq 1 and @join_policy@ eq "open"><form name="sizeForm">#dotlrn-portlet.Size# <input name="size" type="text" size="3" maxlength="3" id="size" value="@max_members@"><input type="Submit" value="OK"/></form></li></if>  
   <li><a href="element-list">#dotlrn-portlet.lt_Change_Name_Portlet#</a></li>
 </if>
  <li><a href="change-site-template?referer=@referer@">#dotlrn.Customize_Template#</a></li>
