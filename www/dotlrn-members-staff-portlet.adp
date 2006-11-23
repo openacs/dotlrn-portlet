@@ -81,7 +81,7 @@
 
   <if @read_private_data_p@>
     <br>
-    <a href="members">#dotlrn-portlet.Member_List#</a>
+    <a href="members" title="#dotlrn-portlet.Member_List#">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
     <br><small>#dotlrn-portlet.no_course_assistant_members#</small>

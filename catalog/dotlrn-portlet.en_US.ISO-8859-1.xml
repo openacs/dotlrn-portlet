@@ -7,6 +7,8 @@
   <msg key="All_members">All members</msg>
   <msg key="Archive">Archive</msg>
   <msg key="Archive_this_group">Archive this group</msg>
+  <msg key="change_bm_policy_to_all_members">Change bulk mail policy to allow all members</msg>
+  <msg key="change_bm_policy_to_only_admins">Change bulk mail policy to allow only administrators</msg>
   <msg key="change_name_etc">Change name, description, etc.</msg>
   <msg key="Change_term">Change term for %pretty_name% from %term_name%</msg>
   <msg key="Closed">Closed</msg>
@@ -21,6 +23,7 @@
   <msg key="goto_admin_pretty_name">Go to %admin_pretty_name%</msg>
   <msg key="goto_Administrator_FAQ">Go to FAQ administration</msg>
   <msg key="goto_Manage_Membership">Go to membership administration page</msg>
+  <msg key="goto_subgroups_pretty_name">Go to subgroup %subgroups.pretty_name%</msg>
   <msg key="lt_AddRemove_pretty_name">Add/Remove %pretty_name% members</msg>
   <msg key="lt_can_send_bulk_mail_to">can send bulk mail to this community.</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Change Bulk Mail Policy</msg>
@@ -50,6 +53,10 @@
   <msg key="no_teaching_assistant_members">No %teaching_assistant_role_pretty_plural%</msg>
   <msg key="Only_admins">Only admins</msg>
   <msg key="Open">Open</msg>
+  <msg key="set_policy_approval">Change enrollment policy to Needs Approval</msg>
+  <msg key="set_policy_closed">Change enrollment policy to Closed
+</msg>
+  <msg key="set_policy_open">Change enrollment policy to Open</msg>
   <msg key="Sort">Sort</msg>
   <msg key="Sortmanage">Sort/manage</msg>
   <msg key="Toggle_privacy_policy_to_no">Change privacy policy so guest users can not view group membership information. </msg>
