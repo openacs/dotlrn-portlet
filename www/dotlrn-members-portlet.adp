@@ -63,10 +63,10 @@
 <p>
 <ul>
 <if @spam_p@ true>
-  <li><a href="spam-recipients?community_id=@community_id@&referer=@referer@">#dotlrn-portlet.Email_Members#</a></li>
+  <li><a href="spam-recipients?community_id=@community_id@&referer=@referer@" title="#dotlrn-portlet.Email_Members#">#dotlrn-portlet.Email_Members#</a></li>
 </if>
 <if @admin_p@ eq 1>
-      <li><a href="members">#dotlrn-portlet.Sortmanage#</a></li>
+      <li><a href="members" title="#dotlrn-portlet.Sortmanage#">#dotlrn-portlet.Sortmanage#</a></li>
 </if>
 </ul>
 </p>
