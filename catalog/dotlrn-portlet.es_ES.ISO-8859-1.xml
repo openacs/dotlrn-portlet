@@ -7,15 +7,23 @@
   <msg key="All_members">Todos los miembros</msg>
   <msg key="Archive">Archivar</msg>
   <msg key="Archive_this_group">Archivar este grupo</msg>
+  <msg key="change_bm_policy_to_all_members">Cambiar la política para permitir el envío de correo a todos los miembros</msg>
+  <msg key="change_bm_policy_to_only_admins">Cambiar la política para permitir el envío de correo sólo a los administradores</msg>
   <msg key="change_name_etc">Cambiar nombre, descripción, etc.</msg>
   <msg key="Change_term">Cambiar período de %pretty_name% a %term_name%</msg>
   <msg key="Closed">Cerrado</msg>
   <msg key="Copy_this_group">Copiar este grupo</msg>
+  <msg key="disable_welcome_message">Desactivar el mensaje de bienvenida</msg>
   <msg key="Disabled">Desactivado</msg>
   <msg key="edit_gr_props">Editar las propiedades de grupo</msg>
   <msg key="Edit_Welcome_Message">Editar Mensaje de Bienvenida</msg>
   <msg key="Email_Members">Enviar correo a miembros</msg>
+  <msg key="enable_welcome_message">Activar el mensaje de bienvenida</msg>
   <msg key="Enabled">Activado</msg>
+  <msg key="goto_admin_pretty_name">Ir a %admin_pretty_name%</msg>
+  <msg key="goto_Administrator_FAQ">Ir a la administración de FAQ</msg>
+  <msg key="goto_Manage_Membership">Ir a la página de administración de miembros</msg>
+  <msg key="goto_subgroups_pretty_name">Ir al subgrupo %subgroups.pretty_name%</msg>
   <msg key="lt_AddRemove_pretty_name">Alta/baja de miembros de %pretty_name%</msg>
   <msg key="lt_can_send_bulk_mail_to">puede enviar correos masivos a esta comunidad.</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Cambiar política de correo masivo</msg>
@@ -44,6 +52,11 @@
   <msg key="no_teaching_assistant_members">Sin %teaching_assistant_role_pretty_plural%</msg>
   <msg key="Only_admins">Sólo administradores</msg>
   <msg key="Open">Abierto</msg>
+  <msg key="set_policy_approval">Cambiar la política de alta a Por aprobación</msg>
+  <msg key="set_policy_closed">Cambiar la política de alta a Cerrada</msg>
+  <msg key="set_policy_open">Cambiar la política de alta a Abierta</msg>
   <msg key="Sort">Ordenar</msg>
   <msg key="Sortmanage">Ordenar/administrar</msg>
+  <msg key="Toggle_privacy_policy_to_no">Cambiar la política para que los usuarios invitados no puedan ver información sobre miembros del grupo</msg>
+  <msg key="Toggle_privacy_policy_to_yes">Cambiar la política para que los usuarios invitados puedan ver información sobre miembros del grupo</msg>
 </message_catalog>
