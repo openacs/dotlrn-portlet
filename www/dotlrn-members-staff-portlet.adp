@@ -34,11 +34,12 @@
           <if @read_private_data_p@ eq 1 or @user_id@ eq @users.user_id@>
             (<%= [email_image::get_user_email -user_id $users(user_id)] %>)
           </if>
+	</li>
         </if>
     </multiple>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.no_instructor_members#</small>
+    <li><small>#dotlrn-portlet.no_instructor_members#</small></li>
   </else>
   </ul>
 
@@ -80,10 +81,10 @@
 
   <if @read_private_data_p@>
     <br>
-    <a href="members">#dotlrn-portlet.Member_List#</a>
+    <a href="members" title="#dotlrn-portlet.Member_List#">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.no_course_assistant_members#</small>
+    <br><small>#dotlrn-portlet.no_course_assistant_members#</small>
   </else>
   </ul>
 </else>
