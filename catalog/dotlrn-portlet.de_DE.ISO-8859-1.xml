@@ -16,6 +16,9 @@
   <msg key="Edit_Welcome_Message">Begrüßungsnachricht editieren</msg>
   <msg key="Email_Members">E-Mail an Teilnehmer senden</msg>
   <msg key="Enabled">Eingeschaltet</msg>
+  <msg key="goto_admin_pretty_name">Zur %admin_pretty_name% gehen</msg>
+  <msg key="goto_Administrator_FAQ">Zur Administratoren-FAQ gehen</msg>
+  <msg key="goto_Manage_Membership">Zur Teilnehmerverwaltung gehen</msg>
   <msg key="lt_AddRemove_pretty_name">Bei &quot;%pretty_name%&quot; Teilnehmer hinzufügen/entfernen</msg>
   <msg key="lt_can_send_bulk_mail_to">können Gruppen-E-Mails an diese Gruppe senden.</msg>
   <msg key="lt_Change_Bulk_Mail_Poli">Gruppen-E-Mail-Optionen ändern</msg>
@@ -45,6 +48,9 @@
   <msg key="no_teaching_assistant_members">Keine %teaching_assistant_role_pretty_plural% vorhanden</msg>
   <msg key="Only_admins">Nur Administratoren</msg>
   <msg key="Open">Selbstregistrierung</msg>
+  <msg key="Size">Größe:</msg>
   <msg key="Sort">Sortieren</msg>
   <msg key="Sortmanage">Sortieren/Verwalten</msg>
+  <msg key="Toggle_privacy_policy_to_no">Verhindern, dass Gastnutzern Informationen zu Gruppenmitgliedschaften sehen.</msg>
+  <msg key="Toggle_privacy_policy_to_yes">Gastnutzern erlauben Information zu Gruppenmitgliedschaften zu sehen</msg>
 </message_catalog>
