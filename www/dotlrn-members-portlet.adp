@@ -24,19 +24,18 @@
 <listtemplate name="users"></listtemplate>
 <if @spam_p@ true or @admin_p@ eq 1>
 <p>
-<ul>
+
 <if @spam_p@ true>
-  <li><a href="spam-recipients?community_id=@community_id@&referer=@referer@" title="#dotlrn-portlet.Email_Members#">#dotlrn-portlet.Email_Members#</a></li>
+  <a href="spam-recipients?community_id=@community_id@&referer=@referer@" title="#dotlrn-portlet.Email_Members#" class="button">#dotlrn-portlet.Email_Members#</a>
 </if>
 <if @admin_p@ eq 1>
-      <li><a href="members" title="#dotlrn-portlet.Sortmanage#">#dotlrn-portlet.Sortmanage#</a></li>
+  	<a href="members" title="#dotlrn-portlet.Sortmanage#" class="button">#dotlrn-portlet.Sortmanage#</a>
 </if>
-</ul>
 </p>
 </if>
 </if>
 <else>
-        <% # The user is not allowed to read the member list - he/she is maybe a guest %>
+        <% # The user is not allowed to read the member list - he/she is may be a guest %>
 	#dotlrn-portlet.lt_Sorry_this_functional#
 </else>
 </if>
