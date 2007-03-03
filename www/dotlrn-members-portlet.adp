@@ -21,44 +21,7 @@
 
 <if @config.shaded_p@ ne "t">
 <if @read_private_data_p@ eq 1>
-
-<table class="table-display" cellpadding=3 cellspacing=0 summary="#dotlrn-portlet.members_portlet_pretty_name#">
-<caption>#dotlrn-portlet.members_portlet_pretty_name#</caption>
-  <tr class="table-header">
-	<th id="bio"></th>
-    <th id="name">#dotlrn.Name#</th>
-	<th id="email">#dotlrn.Email_1#</th>
-	<th id="role">#dotlrn.Role#</th>
-  </tr>
-
-  <multiple name="users">
-  <group column="role">
-  <if @users.rownum@ odd>
-  <tr class="odd">
-  </if>
-  <else>
-  <tr class="even">
-  </else>
-
-    <td headers="bio">
-      <if @users.portrait_p@ true or @users.bio_p@ true>
-        <a href="@users.community_member_url@"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" border="0"></a>
-      </if>
-    </td>
-    <td headers="name">
-      <%= [acs_community_member_link -user_id $users(user_id) -label "$users(first_names) $users(last_name)"] %>
-    </td>
-    <td headers="email">
-      @users.email;noquote@
-    </td>
-    <td headers="role">
-	<i>@users.role@</i>
-    </td>
-  </tr>
-  </group>
-  </multiple>
-</table>
-
+<listtemplate name="users"></listtemplate>
 <if @spam_p@ true or @admin_p@ eq 1>
 <p>
 <ul>
