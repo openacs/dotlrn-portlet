@@ -21,7 +21,7 @@
 <if @config.shaded_p@ ne "t">
 
 <if @community_id@ eq 0>
-  <small>#dotlrn-portlet.lt_No_community_was_spec#</small>
+  #dotlrn-portlet.lt_No_community_was_spec#
 </if>
 <else>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
@@ -39,7 +39,7 @@
     </multiple>
   </if>
   <else>
-    <small>#dotlrn-portlet.no_instructor_members#</small>
+    <li>#dotlrn-portlet.no_instructor_members#</li>
   </else>
   </ul></br>
 <if @n_tas@ gt 0>
@@ -79,15 +79,13 @@
     <a href="members" title="#dotlrn-portlet.Member_List#">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
-    <br><small>#dotlrn-portlet.no_course_assistant_members#</small>
+    <br>#dotlrn-portlet.no_course_assistant_members#
   </else>
   </ul>
 </else>
 
 </if>
 <else>
-  <small>
     #new-portal.when_portlet_shaded#
-  </small>
 </else>
 
