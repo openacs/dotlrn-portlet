@@ -26,7 +26,7 @@
 <p>
 
 <if @spam_p@ true>
-  <a href="spam-recipients?community_id=@community_id@&referer=@referer@" title="#dotlrn-portlet.Email_Members#" class="button">#dotlrn-portlet.Email_Members#</a>
+  <a href="@spam_url@" title="#dotlrn-portlet.Email_Members#" class="button">#dotlrn-portlet.Email_Members#</a>
 </if>
 <if @admin_p@ eq 1>
   	<a href="members" title="#dotlrn-portlet.Sortmanage#" class="button">#dotlrn-portlet.Sortmanage#</a>

@@ -41,7 +41,7 @@
   <else>
     <li>#dotlrn-portlet.no_instructor_members#</li>
   </else>
-  </ul></br>
+  </ul>
 <if @n_tas@ gt 0>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
   <ul>
@@ -55,7 +55,7 @@
         </li>
       </if>
     </multiple>
-  </ul></br>
+  </ul>
 </if>
 
   <if @n_cas@ gt 0>
@@ -81,7 +81,6 @@
   <else>
     <br>#dotlrn-portlet.no_course_assistant_members#
   </else>
-  </ul>
 </else>
 
 </if>

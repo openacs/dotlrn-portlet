@@ -75,3 +75,5 @@ template::list::create \
             label {#dotlrn.Role#}
         }
     }
+
+set spam_url [export_vars -base spam-recipients {community_id referer}]
