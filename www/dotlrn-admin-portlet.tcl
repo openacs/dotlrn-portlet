@@ -96,3 +96,6 @@ db_0or1row member_email {
 }
 
 set referer [ns_conn url]
+
+set limited_user_add_url [export_vars -base user-add {{type student} {can_browse_p 0} {read_private_data_p t}}]
+set club_limited_user_add_url [export_vars -base user-add {{type student} {can_browse_p 0} {read_private_data_p f}}]

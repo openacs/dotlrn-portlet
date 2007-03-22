@@ -85,13 +85,13 @@
   <if @club_p@ eq 0>
     <if @create_limited_user_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
       <li>
-        <a href="user-add?type=student&can_browse_p=0&read_private_data_p=t" title="#dotlrn-protlet.lt_Create_a_new_Limited_#">#dotlrn-portlet.lt_Create_a_new_Limited_#</a> - #dotlrn-portlet.lt_Only_use_this_to_crea# </li>
+        <a href="@limited_user_add_url@" title="#dotlrn-protlet.lt_Create_a_new_Limited_#">#dotlrn-portlet.lt_Create_a_new_Limited_#</a> - #dotlrn-portlet.lt_Only_use_this_to_crea# </li>
       </if>
    </if>
 
 
    <if @create_guest_user_p@ eq 1 or @dotlrn_admin_p@ eq 1 >
-      <li><a href="user-add?type=student&can_browse_p=0&read_private_data_p=f" title="#dotlrn-portlet.lt_Create_a_new_Limited__1#">#dotlrn-portlet.lt_Create_a_new_Limited__1#</a>
+      <li><a href="@club_limited_user_add_url@" title="#dotlrn-portlet.lt_Create_a_new_Limited__1#">#dotlrn-portlet.lt_Create_a_new_Limited__1#</a>
         - #dotlrn-portlet.lt_Only_use_this_to_crea_1#
      </li>
    </if>
