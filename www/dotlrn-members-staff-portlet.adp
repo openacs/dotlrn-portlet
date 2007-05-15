@@ -18,10 +18,10 @@
 
 %>
 
-<!-- aks: shading is broken for this portlet -->
+<if @config.shaded_p@ ne "t">
 
 <if @community_id@ eq 0>
-  <small>#dotlrn-portlet.lt_No_community_was_spec#</small>
+  #dotlrn-portlet.lt_No_community_was_spec#
 </if>
 <else>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_instructor_rel] %>:
@@ -39,12 +39,9 @@
     </multiple>
   </if>
   <else>
-    <li><small>#dotlrn-portlet.no_instructor_members#</small></li>
+    <li>#dotlrn-portlet.no_instructor_members#</li>
   </else>
   </ul>
-
-<p>
-
 <if @n_tas@ gt 0>
   <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ta_rel] %>:
   <ul>
@@ -60,8 +57,6 @@
     </multiple>
   </ul>
 </if>
-
-<p>
 
   <if @n_cas@ gt 0>
     <%= [dotlrn_community::get_role_pretty_plural -community_id $community_id -rel_type dotlrn_ca_rel] %>:
@@ -84,9 +79,12 @@
     <a href="members" title="#dotlrn-portlet.Member_List#">#dotlrn-portlet.Member_List#</a>
   </if>
   <else>
-    <br><small>#dotlrn-portlet.no_course_assistant_members#</small>
+    <br>#dotlrn-portlet.no_course_assistant_members#
   </else>
-  </ul>
 </else>
 
+</if>
+<else>
+    #new-portal.when_portlet_shaded#
+</else>
 

@@ -33,17 +33,47 @@ set community_id $config(community_id)
 set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id -community_id $community_id]
 set read_private_data_p [dotlrn::user_can_read_private_data_p -user_id $user_id -object_id $community_id]
 set spam_p [dotlrn::user_can_spam_community_p -user_id [ad_get_user_id] -community_id $community_id]
-
 # Get all users for this community, including role
 template::util::list_of_ns_sets_to_multirow \
     -rows [dotlrn_community::list_users $community_id] \
     -var_name "users"
 
-template::multirow extend users community_member_url
+template::multirow extend users community_member_url name
 
 template::multirow foreach users { 
     set role [dotlrn_community::get_role_pretty_name -community_id $community_id -rel_type $rel_type]
     set community_member_url [acs_community_member_url -user_id $user_id]
     set email [email_image::get_user_email -user_id $user_id]
+    set name "$first_names $last_name"
 }
 
+template::list::create \
+    -name users \
+    -multirow users \
+    -caption "\#dotlrn-portlet.members_portlet_pretty_name\#" \
+    -html {summary "\#dotlrn-portlet.members_portlet_pretty_name\#"} \
+    -elements {
+        bio {
+            display_template {
+      <if @users.portrait_p@ true or @users.bio_p@ true>
+        <a href="@users.community_member_url@"  title="#acs-subsite.lt_User_has_portrait_title#"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" border="0"></a>
+      </if>
+            }
+            label {}
+        }
+        name {
+            link_url_col community_member_url
+            link_html {title "#acs-subsite.lt_User_has_portrait_title#"}
+            label {#dotlrn.Name#}
+        }
+        email {
+            display_template {@users.email;noquote@}
+            label {#dotlrn.Email#}
+            link_html {title "\#dotlrn.Email"}
+        }
+        role {
+            label {#dotlrn.Role#}
+        }
+    }
+
+set spam_url [export_vars -base spam-recipients {community_id referer}]

@@ -32,16 +32,18 @@
   
       </ul>
 
+	</li>
+
     </ul>
 
   </if>
   <else>
-    <small>#dotlrn-portlet.lt_No_subcomm_pretty_plu#</small>
+    #dotlrn-portlet.lt_No_subcomm_pretty_plu#
   </else>
 
 </if>
 <else>
-  <br>
+  <small>#new-portal.when_portlet_shaded#</small>
 </else>
 
 
