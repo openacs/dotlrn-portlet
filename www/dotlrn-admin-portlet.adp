@@ -34,7 +34,7 @@
    </if>
    <li>
     #dotlrn-portlet.lt_Guests_Can_View_Membership_Info# -
-      <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no" title="#dotlrn-portlet.Toggle_privacy_policy_to_no#">#acs-kernel.common_no#</a></if><else><a href="privacy-policy-toggle?policy=yes" title="#dotlrn-portlet.Toggle_privacy_policy_to_yes#">#acs-kernel.common_Yes#</a>&nbsp;|&nbsp;<b>#acs-kernel.common_no#</b></else>
+      <if @guests_can_view_private_data_p@><b>#acs-kernel.common_yes#</b>&nbsp;|&nbsp;<a href="privacy-policy-toggle?policy=no" title="#dotlrn-portlet.Toggle_privacy_policy_to_no#">#acs-kernel.common_No#</a></if><else><a href="privacy-policy-toggle?policy=yes" title="#dotlrn-portlet.Toggle_privacy_policy_to_yes#">#acs-kernel.common_Yes#</a>&nbsp;|&nbsp;<b>#acs-kernel.common_no#</b></else>
   </li>
 </ul>
 </if>
