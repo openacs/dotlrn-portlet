@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="dotlrn-portlet" package_version="2.3.0" locale="hu_HU" charset="utf-8">
+<message_catalog package_key="dotlrn-portlet" locale="hu_HU" charset="utf-8">
 
   <msg key="lt_No_subcomm_pretty_plu">Nincsenek %subcomm_pretty_plural%</msg>
   <msg key="Member_List">Tagok listája</msg>
