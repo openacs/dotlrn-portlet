@@ -56,7 +56,7 @@ template::list::create \
         bio {
             display_template {
       <if @users.portrait_p@ true or @users.bio_p@ true>
-        <a href="@users.community_member_url@"  title="#acs-subsite.lt_User_has_portrait_title#"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" border="0"></a>
+        <a href="@users.community_member_url@"  title="#acs-subsite.lt_User_has_portrait_title#"><img src="/resources/acs-subsite/profile-16.png" height="16" width="16" alt="#acs-subsite.Profile#" title="#acs-subsite.lt_User_has_portrait_title#" style="border:0"></a>
       </if>
             }
             label {}
