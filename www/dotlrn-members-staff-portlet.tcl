@@ -30,6 +30,7 @@ array set config $cf
 set user_id [ad_conn user_id]
 set referer [ad_conn url]
 set community_id $config(community_id)
+set return_url [ad_return_url]
 
 if { ![string equal $community_id 0] } {
 
