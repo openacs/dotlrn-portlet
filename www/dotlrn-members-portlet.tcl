@@ -29,6 +29,7 @@ array set config $cf
 set user_id [ad_conn user_id]
 set referer [ad_conn url]
 set community_id $config(community_id)
+set return_url [ad_return_url]
 
 set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id -community_id $community_id]
 set read_private_data_p [dotlrn::user_can_read_private_data_p -user_id $user_id -object_id $community_id]
@@ -43,7 +44,7 @@ template::multirow extend users community_member_url name
 template::multirow foreach users { 
     set role [dotlrn_community::get_role_pretty_name -community_id $community_id -rel_type $rel_type]
     set community_member_url [acs_community_member_url -user_id $user_id]
-    set email [email_image::get_user_email -user_id $user_id]
+    set email [email_image::get_user_email -user_id $user_id -return_url $return_url]
     set name "$first_names $last_name"
 }
 
