@@ -6,7 +6,7 @@
         <querytext>
             select community_type,
                    pretty_name,
-                   description,
+                   dotlrn_communities_all.description,
                    join_policy,
                    portal_id,
                    non_member_portal_id,
