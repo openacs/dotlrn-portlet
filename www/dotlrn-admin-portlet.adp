@@ -120,7 +120,7 @@
       <li><a href="dotlrn-group-admin-faq" title="#dotlrn-portlet.goto_Administrator_FAQ#">#dotlrn-portlet.Administrator_FAQ#</a></li>
       <li><a href="clone" title="#dotlrn-portlet.Copy_this_group#">#dotlrn-portlet.Copy_this_group#</a></li>
   <if @archived_p@ eq t>
-      <li><a href="@dotlrn_admin_url@/archived-communities" title="#dotlrn-portlet.goto_archived_communities#"><font color=red>#dotlrn-portlet.lt_This_group_is_archive#</font></a></li>
+      <li><a href="@dotlrn_admin_url@/archived-communities" title="#dotlrn-portlet.goto_archived_communities#"><span style="color:red">#dotlrn-portlet.lt_This_group_is_archive#</span></a></li>
   </if>
   <else>
       <li><a href="subcommunity-archive" title="#dotlrn-portlet.Archive_this_group#">#dotlrn-portlet.Archive_this_group#</a></li>
