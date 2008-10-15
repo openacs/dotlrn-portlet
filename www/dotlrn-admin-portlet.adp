@@ -93,11 +93,11 @@
 <multiple name="subgroups">
       <li>
         <a href="@subgroups.url@" title="#dotlrn-portlet.goto_subgroups_pretty_name#">@subgroups.pretty_name@</a>
-        <nobr>[
+        [
           <a href="@subgroups.url@one-community-admin" title="#dotlrn-portlet.Administer#">#dotlrn-portlet.Administer#</a>
           |
           <a href="subcommunity-archive?community_id=@subgroups.community_id@" title="#dotlrn-portlet.Archive#">#dotlrn-portlet.Archive#</a>
-        ]</nobr>
+        ]
       </li>
 </multiple>
       <li><p><a href="subcommunity-new" title="#dotlrn-portlet.New_sub_pretty_name#">#dotlrn-portlet.New_sub_pretty_name#</a></p></li>
