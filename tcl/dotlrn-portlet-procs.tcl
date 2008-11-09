@@ -118,9 +118,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see    without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
 		    }
                 }
 	    }
@@ -130,9 +130,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see /dotlrn/www/members  without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
               }
              }
 	    }
@@ -142,9 +142,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see /dotlrn/www/one-community-portal-configure  without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
 	       }
              }
 	    }
@@ -154,9 +154,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
 	       }
              }
 	    }
@@ -166,9 +166,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
 	       }
              }
            }
@@ -178,9 +178,9 @@ namespace eval dotlrn_portlet {
                 ns_log notice "user has tried to see /dotlrn/www/applets  without permission"
                 ad_return_forbidden \
                    "Permission Denied"\
-                   "<blockquote>
+                   "<p>
                      You don't have permission to see this page.
-                    </blockquote>"
+                    </p>"
 	       }
              }
           }
