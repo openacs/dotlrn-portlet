@@ -30,6 +30,6 @@ set subcomm_pretty_plural [dotlrn::parameter -localize -name subcommunities_pret
 set subcomm_data [dotlrn_community::get_subcomm_chunk -community_id $community_id]
 
 set has_subcomm_p 0
-if {![empty_string_p $subcomm_data]} {
+if {$subcomm_data ne ""} {
     set has_subcomm_p 1
 }

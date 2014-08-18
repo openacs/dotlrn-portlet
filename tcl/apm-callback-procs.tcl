@@ -23,7 +23,7 @@ ad_proc -private dotlrn_portlet::apm::after_install {
 
        set group_id [db_string group_id_from_name "
             select group_id from groups where group_name='dotlrn-admin'" -default ""]
-        if {![empty_string_p $group_id] } {
+        if {$group_id ne "" } {
 
         #Admin privs
         permission::grant \
@@ -41,7 +41,7 @@ ad_proc -private dotlrn_portlet::apm::before_uninstall {
 
        set group_id [db_string group_id_from_name "
             select group_id from groups where group_name='dotlrn-admin'" -default ""]
-        if {![empty_string_p $group_id] } {
+        if {$group_id ne "" } {
 
         permission::revoke \
             -party_id $group_id \
