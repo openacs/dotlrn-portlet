@@ -62,7 +62,7 @@ namespace eval dotlrn_admin_portlet {
 	return [portal::add_element_parameters \
             -portal_id $portal_id \
             -portlet_name [get_my_name] \
-            -force_region [ad_parameter "dotlrn_admin_portlet_force_region" [my_package_key]] \
+            -force_region [parameter::get -parameter "dotlrn_admin_portlet_force_region"] \
             -key community_id \
             -value $community_id
         ]
