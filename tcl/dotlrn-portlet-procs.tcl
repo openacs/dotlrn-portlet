@@ -101,7 +101,7 @@ namespace eval dotlrn_portlet {
     ad_proc -public is_allowed {
 	{-parameter:required}
     } {
-        This is the TCL proc that is called by some Group Administration pages
+        This is the Tcl proc that is called by some Group Administration pages
         that need to verify a dotlrn-portlet parameter.
         This prevents bad users to access protected pages.
 
