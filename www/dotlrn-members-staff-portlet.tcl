@@ -32,7 +32,7 @@ set referer [ad_conn url]
 set community_id $config(community_id)
 set return_url [ad_return_url]
 
-if { ![string equal $community_id 0] } {
+if { $community_id ne "0" } {
 
     set admin_p [dotlrn::user_can_admin_community_p -user_id $user_id -community_id $community_id]
     set read_private_data_p [dotlrn::user_can_read_private_data_p -user_id $user_id -object_id $community_id]
@@ -46,11 +46,11 @@ if { ![string equal $community_id 0] } {
 
     # count how many of some types
     foreach one_user_set $all_users_list {
-        if {[string equal [ns_set get $one_user_set rel_type] "dotlrn_instructor_rel"]} {
+        if {[ns_set get $one_user_set rel_type] eq "dotlrn_instructor_rel"} {
             incr n_profs
-        } elseif {[string equal [ns_set get $one_user_set rel_type] "dotlrn_ta_rel"]} {
+        } elseif {[ns_set get $one_user_set rel_type] eq "dotlrn_ta_rel"} {
             incr n_tas
-        } elseif {[string equal [ns_set get $one_user_set rel_type] "dotlrn_ca_rel"]} {
+        } elseif {[ns_set get $one_user_set rel_type] eq "dotlrn_ca_rel"} {
             incr n_cas
         }
     }

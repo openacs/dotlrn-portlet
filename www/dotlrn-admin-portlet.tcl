@@ -31,9 +31,9 @@ array set config $cf
 set community_id $config(community_id)
 set dotlrn_admin_p [dotlrn::admin_p]
 set dotlrn_admin_url "[dotlrn::get_url]/admin"
-set sub_pretty_name [ad_parameter -localize subcommunities_pretty_name dotlrn]
-set sub_pretty_plural [ad_parameter -localize subcommunities_pretty_plural dotlrn]
-set admin_pretty_name [ad_parameter -localize dotlrn_admin_pretty_name dotlrn]
+set sub_pretty_name [parameter::get -localize -parameter subcommunities_pretty_name]
+set sub_pretty_plural [parameter::get -localize -parameter subcommunities_pretty_plural]
+set admin_pretty_name [parameter::get -localize -parameter dotlrn_admin_pretty_name]
 set subcommunity_p [dotlrn_community::subcommunity_p -community_id $community_id]
 
 #The community_type is dotlrn_club for "communties" and the subject name for classes.
