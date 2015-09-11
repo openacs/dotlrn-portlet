@@ -78,3 +78,8 @@ template::list::create \
     }
 
 set spam_url [export_vars -base spam-recipients {community_id referer}]
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:
