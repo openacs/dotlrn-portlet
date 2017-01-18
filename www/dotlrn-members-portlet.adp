@@ -20,15 +20,15 @@
 
 
 <if @config.shaded_p@ ne "t">
-<if @read_private_data_p@ eq 1>
+<if @read_private_data_p;literal@ true>
 <listtemplate name="users"></listtemplate>
 <if @spam_p@ true or @admin_p@ eq 1>
 <p>
 
-<if @spam_p@ true>
+<if @spam_p;literal@ true>
   <a href="@spam_url@" title="#dotlrn-portlet.Email_Members#" class="button">#dotlrn-portlet.Email_Members#</a>
 </if>
-<if @admin_p@ eq 1>
+<if @admin_p;literal@ true>
   	<a href="members" title="#dotlrn-portlet.Sortmanage#" class="button">#dotlrn-portlet.Sortmanage#</a>
 </if>
 </p>

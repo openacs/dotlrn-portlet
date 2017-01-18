@@ -74,7 +74,7 @@
     </ul>
   </if>
 
-  <if @read_private_data_p@>
+  <if @read_private_data_p;literal@ true>
     <br>
     <a href="members" title="#dotlrn-portlet.Member_List#">#dotlrn-portlet.Member_List#</a>
   </if>
