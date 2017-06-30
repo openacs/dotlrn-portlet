@@ -67,7 +67,7 @@ namespace eval dotlrn_members_portlet {
     ad_proc -public remove_self_from_page {
         {-portal_id:required}
     } {
-	Removes the dotlrn "memebers"  PE from the given portal
+	Removes the dotlrn "members"  PE from the given portal
     } {
         portal::remove_element \
             -portal_id $portal_id \
