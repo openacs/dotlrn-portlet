@@ -20,7 +20,7 @@
 
 <if @config.shaded_p@ ne "t">
 
-  <if @has_subcomm_p@ eq 1>
+  <if @has_subcomm_p;literal@ true>
 
     <ul>
 

@@ -99,3 +99,9 @@ set referer [ns_conn url]
 
 set limited_user_add_url [export_vars -base user-add {{type student} {can_browse_p 0} {read_private_data_p t}}]
 set club_limited_user_add_url [export_vars -base user-add {{type student} {can_browse_p 0} {read_private_data_p f}}]
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:
