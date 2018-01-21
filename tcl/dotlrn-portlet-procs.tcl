@@ -64,7 +64,7 @@ namespace eval dotlrn_portlet {
         set force_region [parameter::get_from_package_key \
                               -package_key [my_package_key] \
                               -parameter "dotlrn_portlet_force_region"
-        ]
+                         ]
 
         set element_id [portal::add_element_parameters \
                             -portal_id $portal_id \
@@ -73,7 +73,7 @@ namespace eval dotlrn_portlet {
                             -force_region $force_region \
                             -key "community_id" \
                             -value $community_id
-        ]
+                       ]
 
 	return $element_id
     }
@@ -90,7 +90,7 @@ namespace eval dotlrn_portlet {
     }
 
     ad_proc -public show {
-	 cf
+        cf
     } {
     } {
         portal::show_proc_helper \
@@ -105,7 +105,7 @@ namespace eval dotlrn_portlet {
         that need to verify a dotlrn-portlet parameter.
         This prevents bad users to access protected pages.
 
- 
+        
         @author Hector Amado (hr_amado@galileo.edu)
         @creation-date 2004-06-22
 
@@ -115,75 +115,69 @@ namespace eval dotlrn_portlet {
             "cenrollment" {
 		if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowChangeEnrollmentPolicy] } {
 		    if { ![dotlrn::admin_p] } {  
-                ns_log notice "user has tried to see    without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
+                        ns_log notice "user has tried to see    without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
 		    }
                 }
 	    }
             "managemembership" {
                 if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowManageMembership] } {
-     	      if { ![dotlrn::admin_p] } {
-                ns_log notice "user has tried to see /dotlrn/www/members  without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
-              }
-             }
+                    if { ![dotlrn::admin_p] } {
+                        ns_log notice "user has tried to see /dotlrn/www/members  without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
+                    }
+                }
 	    }
             "cplayout" {
                 if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCustomizePortalLayout] } {
-                	 if { ![dotlrn::admin_p] } {
-                ns_log notice "user has tried to see /dotlrn/www/one-community-portal-configure  without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
-	       }
-             }
+                    if { ![dotlrn::admin_p] } {
+                        ns_log notice "user has tried to see /dotlrn/www/one-community-portal-configure  without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
+                    }
+                }
 	    }
             "guestuser" { 
                 if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCreateGuestUsersInCommunity] } {
-                	 if { ![dotlrn::admin_p] } {
-                ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
-	       }
-             }
+                    if { ![dotlrn::admin_p] } {
+                        ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
+                    }
+                }
 	    }
             "limiteduser" {
                 if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowCreateLimitedUsersInCommunity] } {
-     	                 if { ![dotlrn::admin_p] } {
-                ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
-	       }
-             }
-           }
+                    if { ![dotlrn::admin_p] } {
+                        ns_log notice "user has tried to see /dotlrn/www/user-add  without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
+                    }
+                }
+            }
 	    "manageapplets" {
-              if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowManageApplets] } {
-     	                 if { ![dotlrn::admin_p] } {
-                ns_log notice "user has tried to see /dotlrn/www/applets  without permission"
-                ad_return_forbidden \
-                   "Permission Denied"\
-                   "<p>
-                     You don't have permission to see this page.
-                    </p>"
-	       }
-             }
-          }
+                if { ![parameter::get_from_package_key -package_key dotlrn-portlet -parameter AllowManageApplets] } {
+                    if { ![dotlrn::admin_p] } {
+                        ns_log notice "user has tried to see /dotlrn/www/applets  without permission"
+                        ad_return_forbidden \
+                            "Permission Denied"\
+                            "<p>You don't have permission to see this page.</p>"
+                        ad_script_abort
+                    }
+                }
+            }
 	}
     }
 }
