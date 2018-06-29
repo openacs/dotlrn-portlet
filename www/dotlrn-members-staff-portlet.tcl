@@ -19,7 +19,7 @@
 ad_page_contract {
     @author yon (yon@milliped.com)
     @creation-date Jan 08, 2002
-    @version $Id$
+    @cvs-id $Id$
 } -query {
 } -properties {
     users:multirow
