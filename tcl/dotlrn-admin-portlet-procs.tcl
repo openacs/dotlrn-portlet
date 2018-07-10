@@ -34,16 +34,22 @@ namespace eval dotlrn_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
+        Get portlet pretty name.
+    } {
 	return "#dotlrn-portlet.admin_pretty_name#"
     }
 
     ad_proc -public my_package_key {
+    } {
+        Get portlet package key.
     } {
         return "dotlrn-portlet"
     }
 
     ad_proc -public link {
     } {
+        Get portlet link (empty).
+    }
 	return ""
     }
 
@@ -52,7 +58,7 @@ namespace eval dotlrn_admin_portlet {
 	{-community_id:required}
     } {
 	Adds the dotlrn admin PE to the given page with the community_id as
-        as parameter
+        as parameter.
 
 	@param portal_id The page to add self to
 	@param community_id The dotlrn community to show info about
@@ -71,7 +77,7 @@ namespace eval dotlrn_admin_portlet {
     ad_proc -public remove_self_from_page {
         {-portal_id:required}
     } {
-	Removes a dotlrn PE from the given portal
+	Removes a dotlrn PE from the given portal.
     } {
 	portal::remove_element \
             -portal_id $portal_id \
@@ -81,6 +87,7 @@ namespace eval dotlrn_admin_portlet {
     ad_proc -public show {
 	 cf
     } {
+        Show dotlrn admin portlet.
     } {
         portal::show_proc_helper \
             -package_key [my_package_key] \
