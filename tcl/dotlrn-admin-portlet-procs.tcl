@@ -49,7 +49,7 @@ namespace eval dotlrn_admin_portlet {
     ad_proc -public link {
     } {
         Get portlet link (empty).
-    }
+    } {
 	return ""
     }
 
