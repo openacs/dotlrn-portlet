@@ -16,7 +16,7 @@
 
 --
 
--- Creates dotlrn datasource for showing staff members for a comunity
+-- Creates dotlrn datasource for showing staff members for a community
 
 -- Copyright (C) 2001 MIT
 -- @author Arjun Sanyal (arjun@openforce.net)
