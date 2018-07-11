@@ -41,11 +41,15 @@ namespace eval dotlrn_portlet {
 
     ad_proc -public get_pretty_name {
     } {
+        Get the pretty name.
+    } {
         # get the param from the dotlrn package
 	return [dotlrn::parameter -name subcommunities_pretty_plural]
     }
 
     ad_proc -public link {
+    } {
+        Get the link. This is currently empty.
     } {
 	return ""
     }
@@ -54,7 +58,7 @@ namespace eval dotlrn_portlet {
 	{-portal_id:required}
 	{-community_id:required}
     } {
-	Adds a dotlrn PE to the given communities's portal
+	Adds a dotlrn PE to the given communities's portal.
 
 	@param portal_id
 	@param community_id
@@ -92,6 +96,7 @@ namespace eval dotlrn_portlet {
     ad_proc -public show {
         cf
     } {
+        Show the dotlrn portlet.
     } {
         portal::show_proc_helper \
             -package_key [my_package_key] \

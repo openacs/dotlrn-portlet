@@ -36,10 +36,14 @@ namespace eval dotlrn_members_staff_portlet {
 
     ad_proc -public get_pretty_name {
     } {
+        Get the pretty name.
+    } {
 	return "#dotlrn-portlet.members_staff_portlet_pretty_name#"
     }
 
     ad_proc -public link {
+    } {
+        Get the link. This is currently empty.
     } {
 	return ""
     }
@@ -48,7 +52,7 @@ namespace eval dotlrn_members_staff_portlet {
 	{-portal_id:required}
 	{-community_id:required}
     } {
-        Add the "dotlrn members staff" portlet to the page
+        Add the "dotlrn members staff" portlet to the page.
     } {
         set force_region [parameter::get_from_package_key \
                               -package_key [my_package_key] \
@@ -68,7 +72,7 @@ namespace eval dotlrn_members_staff_portlet {
     ad_proc -public remove_self_from_page {
         {-portal_id:required}
     } {
-	Removes the PE from the given page
+	Removes the PE from the given page.
     } {
         portal::remove_element \
             -portal_id $portal_id \
@@ -78,7 +82,7 @@ namespace eval dotlrn_members_staff_portlet {
     ad_proc -public show {
 	 cf
     } {
-	 Call the template to display
+	 Call the template to display.
 
 	 @param cf A config array
     } {
