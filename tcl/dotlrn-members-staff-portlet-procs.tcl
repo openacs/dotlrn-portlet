@@ -16,7 +16,7 @@
 
 ad_library {
 
-    Procedures to supports the dotlrn "members staff" portlet aka "Staff List"
+    Procedures to supports the dotlrn "members staff" portlet a.k.a. "Staff List"
 
     @author arjun@openforce.net
     @cvs-id $Id$
@@ -38,41 +38,41 @@ namespace eval dotlrn_members_staff_portlet {
     } {
         Get the pretty name.
     } {
-	return "#dotlrn-portlet.members_staff_portlet_pretty_name#"
+        return "#dotlrn-portlet.members_staff_portlet_pretty_name#"
     }
 
     ad_proc -public link {
     } {
         Get the link. This is currently empty.
     } {
-	return ""
+        return ""
     }
 
     ad_proc -public add_self_to_page {
-	{-portal_id:required}
-	{-community_id:required}
+        {-portal_id:required}
+        {-community_id:required}
     } {
         Add the "dotlrn members staff" portlet to the page.
     } {
         set force_region [parameter::get_from_package_key \
-                              -package_key [my_package_key] \
-                              -parameter "dotlrn_members_staff_portlet_force_region"
+            -package_key [my_package_key] \
+            -parameter "dotlrn_members_staff_portlet_force_region"
         ]
 
         return [portal::add_element_parameters \
-                    -portal_id $portal_id \
-                    -pretty_name [get_pretty_name] \
-                    -portlet_name [get_my_name] \
-                    -force_region $force_region \
-                    -key "community_id" \
-                    -value $community_id
+            -portal_id $portal_id \
+            -pretty_name [get_pretty_name] \
+            -portlet_name [get_my_name] \
+            -force_region $force_region \
+            -key "community_id" \
+            -value $community_id
         ]
     }
 
     ad_proc -public remove_self_from_page {
         {-portal_id:required}
     } {
-	Removes the PE from the given page.
+        Removes the PE from the given page.
     } {
         portal::remove_element \
             -portal_id $portal_id \
@@ -80,18 +80,17 @@ namespace eval dotlrn_members_staff_portlet {
     }
 
     ad_proc -public show {
-	 cf
+        cf
     } {
-	 Call the template to display.
+        Call the template to display.
 
-	 @param cf A config array
+        @param cf A config array
     } {
         portal::show_proc_helper \
             -package_key [my_package_key] \
             -config_list $cf \
             -template_src "dotlrn-members-staff-portlet"
     }
-
 }
 
 # Local variables:
