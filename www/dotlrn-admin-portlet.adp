@@ -47,7 +47,7 @@
     <ul>
     <if @member_email_enabled_p@ defined>
       <li><a href="member-email" title="#dotlrn-portlet.Edit_Welcome_Message#">#dotlrn-portlet.Edit_Welcome_Message#</a>
-       - <if @member_email_enabled_p@ true"><strong>#acs-subsite.Enabled#</strong></if>
+       - <if @member_email_enabled_p@ true><strong>#acs-subsite.Enabled#</strong></if>
          <else><a href="member-email-toggle" title="#dotlrn-portlet.enable_welcome_message#">#acs-subsite.Enabled#</a></else> |
          <if @member_email_enabled_p;literal@ false><strong>#acs-subsite.Disabled#</strong></if>
          <else><a href="member-email-toggle" title="#dotlrn-portlet.disable_welcome_message#">#acs-subsite.Disabled#</a></else>
