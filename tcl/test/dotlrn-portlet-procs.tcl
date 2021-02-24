@@ -11,6 +11,7 @@ aa_register_case -procs {
         dotlrn_portlet::link
         dotlrn_portlet::get_pretty_name
         dotlrn_members_portlet::link
+        dotlrn_members_portlet::get_my_name
         dotlrn_members_staff_portlet::link
         dotlrn_members_staff_portlet::get_pretty_name
         dotlrn_members_portlet::get_pretty_name
@@ -29,6 +30,7 @@ aa_register_case -procs {
     aa_equals "dotLRN members staff portlet pretty name"    "[dotlrn_members_staff_portlet::get_pretty_name]" "#dotlrn-portlet.members_staff_portlet_pretty_name#"
     aa_equals "dotLRN portlet pretty name"                  "[dotlrn_portlet::get_pretty_name]" "[dotlrn::parameter -name subcommunities_pretty_plural]"
     aa_equals "dotLRN members portlet pretty name"          "[dotlrn_members_portlet::get_pretty_name]" "#dotlrn-portlet.members_portlet_pretty_name#"
+    aa_equals "dotLRN members portlet my_name"              "[dotlrn_members_portlet::get_my_name]" "dotlrn_members_portlet"
     aa_equals "dotLRN admin portlet pretty name"            "[dotlrn_admin_portlet::get_pretty_name]" "#dotlrn-portlet.admin_pretty_name#"
     aa_equals "dotLRN admin portlet package key"            "[dotlrn_admin_portlet::my_package_key]" "dotlrn-portlet"
 }
