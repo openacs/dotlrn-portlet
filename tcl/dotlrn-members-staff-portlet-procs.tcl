@@ -16,7 +16,7 @@
 
 ad_library {
 
-    Procedures to supports the dotlrn "members staff" portlet a.k.a. "Staff List"
+    Procedures to supports the dotlrn "members staff" portlet aka "Staff List"
 
     @author arjun@openforce.net
     @cvs-id $Id$
