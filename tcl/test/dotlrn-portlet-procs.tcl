@@ -7,6 +7,63 @@ ad_library {
 }
 
 aa_register_case -procs {
+    dotlrn_admin_portlet::show
+    dotlrn_admin_portlet::get_my_name
+    dotlrn_members_portlet::show
+    dotlrn_members_portlet::get_my_name
+    dotlrn_members_staff_portlet::show
+    dotlrn_members_staff_portlet::get_my_name
+    dotlrn_portlet::show
+    dotlrn_portlet::get_my_name
+} -cats {
+    api
+    smoke
+} render_portlet {
+    Test the rendering of the portlets
+} {
+    #
+    # We prefer a community with subcommunities so that we can test
+    # the dotlrn_portlet properly, but we will take any when none is
+    # available.
+    #
+    set community_id [db_string get_community {
+        select c.community_id
+          from dotlrn_communities c
+               left join dotlrn_communities s
+                 on s.parent_community_id = c.community_id
+         order by s.community_id, c.community_id
+        fetch first 1 rows only
+    }]
+
+    set cf [list \
+                community_id $community_id \
+                shaded_p false \
+               ]
+
+    foreach portlet {
+        dotlrn_admin_portlet dotlrn_members_portlet dotlrn_members_staff_portlet dotlrn_portlet
+    } {
+        aa_section $portlet
+
+        set portlet [acs_sc::invoke \
+                         -contract portal_datasource \
+                         -operation Show \
+                         -impl [${portlet}::get_my_name] \
+                         -call_args [list $cf]]
+
+        aa_log "Portlet returns: [ns_quotehtml $portlet]"
+
+        aa_false "No error was returned" {
+            [string first "Error in include template" $portlet] >= 0
+        }
+
+        aa_true "Portlet looks like HTML" {
+            [ad_looks_like_html_p $portlet] || $portlet ne ""
+        }
+    }
+}
+
+aa_register_case -procs {
         dotlrn_admin_portlet::link
         dotlrn_portlet::link
         dotlrn_portlet::get_pretty_name
