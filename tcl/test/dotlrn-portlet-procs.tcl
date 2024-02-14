@@ -33,7 +33,12 @@ aa_register_case -procs {
                  on s.parent_community_id = c.community_id
          order by s.community_id, c.community_id
         fetch first 1 rows only
-    }]
+    } -default ""]
+
+    if {$community_id eq ""} {
+        aa_log_result fail "No communities. This test cannot be performed."
+        return
+    }
 
     foreach shaded_p {true false} {
 
