@@ -36,7 +36,7 @@ set sub_pretty_plural [parameter::get -localize -parameter subcommunities_pretty
 set admin_pretty_name [parameter::get -localize -parameter dotlrn_admin_pretty_name]
 set subcommunity_p [dotlrn_community::subcommunity_p -community_id $community_id]
 
-#The community_type is dotlrn_club for "communties" and the subject name for classes.
+#The community_type is dotlrn_club for "communities" and the subject name for classes.
 set comm_type [dotlrn_community::get_community_type_from_community_id $community_id]
 
 #Checking group admin parameters

@@ -25,7 +25,8 @@ ad_library {
 
 namespace eval dotlrn_members_portlet {
 
-    ad_proc -private get_my_name {
+    ad_proc -public get_my_name {} {
+        Get the portlet name.
     } {
         return "dotlrn_members_portlet"
     }
